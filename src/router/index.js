@@ -1,0 +1,39 @@
+import { createRouter, createWebHashHistory } from 'vue-router'
+
+const routes = [
+  {
+    path: '/',
+    component: () => import('../views/FrontLayout.vue'),
+    children: [
+      {
+        path: '',
+        component: () => import('../views/HomeView.vue')
+      },
+      {
+        path: 'story',
+        component: () => import('../views/BrandStory.vue')
+      },
+      {
+        path: 'menu',
+        component: () => import('../views/ProductMenu.vue')
+      },
+      {
+        path: 'detail/:id',
+        component: () => import('../views/ProductDescription.vue')
+      },
+      {
+        path: 'stores',
+        component: () => import('../views/StoresInfo.vue')
+      }
+    ]
+  }
+
+]
+
+const router = createRouter({
+  history: createWebHashHistory(),
+  linkActiveClass: 'active',
+  routes
+})
+
+export default router
