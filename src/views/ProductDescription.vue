@@ -4,7 +4,7 @@
     <div class="card mb-3" style="100%">
       <div class="row g-0">
         <div class="col-md-5">
-          <img :src="selectProduct.imageUrl" class="img-fluid rounded-start" alt="...">
+          <img :src="selectProduct.imageUrl" class="img-fluid object-fit-cover rounded-start" :alt="selectProduct.title">
         </div>
         <div class="offset-md-1 col-md-6">
           <div class="card-body p-4">
@@ -49,7 +49,7 @@
               </div>
             </div>
 
-            <button type="button" class="btn-addCart w-100 btn btn-outline-primary border border-primary rounded-3 bg-transparent border-2 mx-2 fz-4 fw-bold" data-hover="加入購物車">
+            <button type="button" class="btn-addCart w-100 btn btn-outline-primary border border-primary rounded-3 bg-transparent border-2 mx-2 fz-4 fw-bold lh-base" data-hover="加入購物車">
               <span>
                 小計 NT${{ qty*selectProduct.price }}
               </span>
@@ -139,6 +139,8 @@ export default {
       transform: scale(0.3);
     }
     &:after {
+      top: 50%;
+      transform: translateY(-50%);
       opacity: 1;
     }
   }

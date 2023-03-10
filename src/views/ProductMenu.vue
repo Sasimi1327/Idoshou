@@ -50,7 +50,9 @@
     <div class="row">
       <div class="col-md-6 col-lg-3 mb-8" v-for="product in products" :key="product.id">
         <div class="card h-100">
-          <img :src="product.imageUrl" class="img-fluid card-img-top productImg" alt="">
+          <div class="card-img-container">
+            <img :src="product.imageUrl" class="card-img-top productImg" :alt="product.id">
+          </div>
           <div class="card-body text-start">
             <h5 class="card-title fz-7 lh-base fw-bold">{{ product.title }}</h5>
             <p class="card-text">
@@ -77,7 +79,7 @@
             @click="goDetail(`/detail/${product.id}`)"
             type="button" class="w-100 btn btn-primary stretched-link mb-5">加入購物車</RouterLink>
            -->
-           <button @click="goDetail(`${product.id}`)"
+           <button @click.prevent="goDetail(`${product.id}`)"
             type="button" class="w-100 btn btn-primary stretched-link mb-5">加入購物車</button>
           </div>
         </div>
@@ -187,7 +189,22 @@ export default {
 }
 
 .card {
-  overflow: hidden;
+  .card-img-container {
+    overflow: hidden;
+    position: relative;
+    height: 0;
+    padding-bottom: 85%;
+    .productImg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all 0.3s ease-out;
+      transform-origin: center center;
+    }
+  }
   &:hover {
     .productImg {
       transition: all .7s ease-in-out;
