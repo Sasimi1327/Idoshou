@@ -73,7 +73,12 @@
             </p>
           </div>
           <div class="card-footer border-0 bg-white text-end">
-            <button type="button" class="w-100 btn btn-primary stretched-link mb-5">加入購物車</button>
+            <!-- <RouterLink :to="`/detail/${product.id}`"
+            @click="goDetail(`/detail/${product.id}`)"
+            type="button" class="w-100 btn btn-primary stretched-link mb-5">加入購物車</RouterLink>
+           -->
+           <button @click="goDetail(`${product.id}`)"
+            type="button" class="w-100 btn btn-primary stretched-link mb-5">加入購物車</button>
           </div>
         </div>
       </div>
@@ -87,6 +92,7 @@
 </template>
 
 <script>
+// import { RouterLink } from 'vue-router'
 import PaginationView from '../components/PaginationView.vue'
 
 const { VITE_URL, VITE_PATH } = import.meta.env
@@ -94,6 +100,7 @@ const { VITE_URL, VITE_PATH } = import.meta.env
 export default {
   components: {
     PaginationView
+    // RouterLink
   },
   data () {
     return {
@@ -106,10 +113,15 @@ export default {
   },
   methods: {
     getProducts (page = 1, category = '') {
+      if (this.$route.query.page) {
+        page = this.$route.query.page
+        this.$route.query.page = ''
+      }
+
+      this.currentPage = page
       const url = `${VITE_URL}/api/${VITE_PATH}/products?page=${page}&category=${category}`
       this.$http.get(url)
         .then(res => {
-          console.log(res)
           this.products = res.data.products
           this.pagination = res.data.pagination
         })
@@ -124,6 +136,17 @@ export default {
       } else {
         this.getProducts(1, category)
       }
+    },
+    goDetail (id) {
+      this.$router.push({
+        name: 'product-detail',
+        params: {
+          id
+        },
+        query: {
+          page: this.currentPage
+        }
+      })
     }
   },
   mounted () {

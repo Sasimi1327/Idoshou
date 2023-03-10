@@ -15,10 +15,12 @@ const routes = [
       },
       {
         path: 'menu',
+        name: 'product-list',
         component: () => import('../views/ProductMenu.vue')
       },
       {
         path: 'detail/:id',
+        name: 'product-detail',
         component: () => import('../views/ProductDescription.vue')
       },
       {

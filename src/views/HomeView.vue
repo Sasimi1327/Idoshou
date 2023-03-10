@@ -37,7 +37,7 @@
 
       <div class="col-md-4 mb-4 mb-md-0" v-for="newItem in productsNew" :key="newItem.id">
         <div class="card card-image bg-dark text-white">
-          <img :src="newItem.imageUrl" class="card-img" alt="...">
+          <img :src="newItem.imageUrl" class="card-img productImg" :alt="newItem.id">
           <div class="card-img-overlay d-flex flex-column justify-content-end">
             <div>
               <h5 class="card-subtitle fz-7 fw-normal">{{ newItem.unit }}</h5>
@@ -47,43 +47,6 @@
           </div>
         </div>
       </div>
-
-      <!-- <div class="col-md-4 mb-4 mb-md-0">
-        <div class="card card-image bg-dark text-white">
-          <img src="../assets/img_new_item_1.svg" class="card-img" alt="...">
-          <div class="card-img-overlay d-flex flex-column justify-content-end">
-            <div>
-              <h5 class="card-subtitle fz-7 fw-normal">超清爽牛肉</h5>
-              <h3 class="card-title fz-2 fw-bold mt-2">清燉牛肉麵</h3>
-              <button type="button" class="btn-like stretched-link btn btn-white py-2 px-4 rounded-1 mt-8 fz-8 align-middle">我有興趣</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4 mb-4 mb-md-0">
-        <div class="card card-image bg-dark text-white">
-          <img src="../assets/img_new_item_2.svg" class="card-img" alt="...">
-          <div class="card-img-overlay d-flex flex-column justify-content-end">
-            <div>
-              <h5 class="card-subtitle fz-7 fw-normal">滿滿的菇味</h5>
-              <h3 class="card-title fz-2 fw-bold mt-2">香菇雞麵</h3>
-              <button type="button" class="btn-like stretched-link btn btn-white py-2 px-4 rounded-1 mt-8 fz-8 align-middle">我有興趣</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-md-4">
-        <div class="card card-image bg-dark text-white">
-          <img src="../assets/img_new_item_3.svg" class="card-img" alt="...">
-          <div class="card-img-overlay d-flex flex-column justify-content-end">
-            <div>
-              <h5 class="card-subtitle fz-7 fw-normal">酥脆爆汁</h5>
-              <h3 class="card-title fz-2 fw-bold mt-2">冰花煎餃</h3>
-              <button type="button" class="btn-like stretched-link btn btn-white py-2 px-4 rounded-1 mt-8 fz-8 align-middle">我有興趣</button>
-            </div>
-          </div>
-        </div>
-      </div> -->
     </div>
   </div>
 
@@ -139,7 +102,7 @@
 
           <div class="col-md-3" v-for="popularItem in productsPopular" :key="popularItem.id">
             <div class="card border-0">
-              <img :src="popularItem.imageUrl" class="card-img-top" alt="">
+              <img :src="popularItem.imageUrl" class="card-img-top" :alt="popularItem.id">
               <div class="card-body text-center">
                 <h5 class="card-title fz-8 lh-base fw-normal">{{ popularItem.title }}</h5>
                 <p class="card-text">
@@ -148,52 +111,6 @@
               </div>
             </div>
           </div>
-
-          <!-- <div class="col-md-3">
-            <div class="card border-0">
-              <img src="../assets/img_hot_1.png" class="card-img-top" alt="">
-              <div class="card-body text-center">
-                <h5 class="card-title fz-8 lh-base fw-normal">濃郁鹹香泰式打拋豬</h5>
-                <p class="card-text">
-                  <small class="text-muted fw-bold fz-6 lh-1">NT$ 250</small>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card border-0">
-              <img src="../assets/img_hot_2.png" class="card-img-top" alt="">
-              <div class="card-body text-center">
-                <h5 class="card-title fz-8 lh-base fw-normal">炒什錦海鮮麵</h5>
-                <p class="card-text">
-                  <small class="text-muted fw-bold fz-6 lh-1">NT$ 300</small>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card border-0">
-              <img src="../assets/img_hot_3.png" class="card-img-top" alt="">
-              <div class="card-body text-center">
-                <h5 class="card-title fz-8 lh-base fw-normal">男子漢對決雞排飯</h5>
-                <p class="card-text">
-                  <small class="text-muted fw-bold fz-6 lh-1">NT$ 200</small>
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="card border-0">
-              <img src="../assets/img_hot_4.png" class="card-img-top" alt="">
-              <div class="card-body text-center">
-                <h5 class="card-title fz-8 lh-base fw-normal">越南香茅烤豬販</h5>
-                <p class="card-text">
-                  <small class="text-muted fw-bold fz-6 lh-1">NT$ 250</small>
-                </p>
-              </div>
-            </div>
-          </div> -->
-
         </div>
       </div>
 
@@ -204,7 +121,7 @@
                 :modules="modules" class="mySwiper">
           <swiper-slide v-for="popularItem in productsPopular" :key="popularItem.id">
             <div class="card border-0">
-              <img :src="popularItem.imageUrl" class="card-img-top" alt="">
+              <img :src="popularItem.imageUrl" class="card-img-top" :alt="popularItem.id">
               <div class="card-body text-center">
                 <h5 class="card-title fz-8 lh-base fw-normal">{{ popularItem.title }}</h5>
                 <p class="card-text">
@@ -213,50 +130,6 @@
               </div>
             </div>
           </swiper-slide>
-          <!-- <swiper-slide>
-            <div class="card border-0">
-              <img src="../assets/img_hot_1.png" class="card-img-top" alt="">
-              <div class="card-body text-center">
-                <h5 class="card-title fz-8 lh-base fw-normal">濃郁鹹香泰式打拋豬</h5>
-                <p class="card-text">
-                  <small class="text-muted fw-bold fz-6 lh-1">NT$ 250</small>
-                </p>
-              </div>
-            </div>
-          </swiper-slide>
-          <swiper-slide>
-            <div class="card border-0">
-              <img src="../assets/img_hot_2.png" class="card-img-top" alt="">
-              <div class="card-body text-center">
-                <h5 class="card-title fz-8 lh-base fw-normal">炒什錦海鮮麵</h5>
-                <p class="card-text">
-                  <small class="text-muted fw-bold fz-6 lh-1">NT$ 300</small>
-                </p>
-              </div>
-            </div>
-          </swiper-slide>
-          <swiper-slide>
-            <div class="card border-0">
-              <img src="../assets/img_hot_3.png" class="card-img-top" alt="">
-              <div class="card-body text-center">
-                <h5 class="card-title fz-8 lh-base fw-normal">男子漢對決雞排飯</h5>
-                <p class="card-text">
-                  <small class="text-muted fw-bold fz-6 lh-1">NT$ 200</small>
-                </p>
-              </div>
-            </div>
-          </swiper-slide>
-          <swiper-slide>
-            <div class="card border-0">
-              <img src="../assets/img_hot_4.png" class="card-img-top" alt="">
-              <div class="card-body text-center">
-                <h5 class="card-title fz-8 lh-base fw-normal">越南香茅烤豬販</h5>
-                <p class="card-text">
-                  <small class="text-muted fw-bold fz-6 lh-1">NT$ 250</small>
-                </p>
-              </div>
-            </div>
-          </swiper-slide> -->
         </swiper>
       </div>
       <button type="button" class="btnMoreProd btn btn-primary mt-6 mt-md-10 px-6 py-3 rounded-1 fz-8 fw-bold">更多暢銷商品</button>
