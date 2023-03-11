@@ -9,20 +9,23 @@
         <div class="offset-md-1 col-md-6">
           <div class="card-body p-4">
             <div class="d-flex justify-content-between align-items-center">
-              <h5 class="card-subtitle fz-7 fw-normal lh-base opacity-50 text-grey-66">{{ selectProduct.category }}</h5>
+              <h5 class="card-subtitle fz-7 fw-normal lh-base opacity-50 text-grey-66">
+                {{ selectProduct.category }}
+              </h5>
               <button type="button" class="btn-close"
               @click="goMenu"
               ></button>
             </div>
-
-            <h3 class="card-title fz-2 fw-bold mt-3 text-brown">{{ selectProduct.title }}</h3>
-            <p class="card-text my-4">{{ selectProduct.description }}</p>
-            <p class="card-text">
-              NT$
-              <ins class="text-decoration-none">
-                <span class="text-muted fw-bold fz-3 ">{{ selectProduct.price }}</span>
-              </ins>
-            </p>
+            <div class="mr-6">
+              <h3 class="card-title fz-2 fw-bold mt-3 text-brown">{{ selectProduct.title }}</h3>
+              <p class="card-text my-4">{{ selectProduct.description }}</p>
+              <p class="card-text">
+                NT$
+                <ins class="text-decoration-none">
+                  <span class="text-muted fw-bold fz-3 ">{{ selectProduct.price }}</span>
+                </ins>
+              </p>
+            </div>
           </div>
         </div>
         <div class="col-12">
@@ -49,7 +52,9 @@
               </div>
             </div>
 
-            <button type="button" class="btn-addCart w-100 btn btn-outline-primary border border-primary rounded-3 bg-transparent border-2 mx-2 fz-4 fw-bold lh-base" data-hover="加入購物車">
+            <button type="button" class="btn-addCart w-100 btn btn-outline-primary border border-primary rounded-3 bg-transparent border-2 mx-2 fz-4 fw-bold lh-base" data-hover="加入購物車"
+            @click.prevent="() => addToCart(selectProduct.id, qty)"
+            >
               <span>
                 小計 NT${{ qty*selectProduct.price }}
               </span>
@@ -63,6 +68,9 @@
 </template>
 
 <script>
+import cartStore from '@/stores/cart'
+import { mapActions } from 'pinia'
+
 const { VITE_URL, VITE_PATH } = import.meta.env
 
 export default {
@@ -74,6 +82,7 @@ export default {
     }
   },
   methods: {
+    ...mapActions(cartStore, ['addToCart']),
     getProduct () {
       const { id } = this.$route.params
       const url = `${VITE_URL}/api/${VITE_PATH}/product/${id}`

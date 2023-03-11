@@ -42,7 +42,8 @@
             <div>
               <h5 class="card-subtitle fz-7 fw-normal">{{ newItem.unit }}</h5>
               <h3 class="card-title fz-2 fw-bold mt-2">{{ newItem.title }}</h3>
-              <button type="button" class="btn-like stretched-link btn btn-white py-2 px-4 rounded-1 mt-8 fz-8 align-middle">我有興趣</button>
+              <button type="button" class="btn-like stretched-link btn btn-white py-2 px-4 rounded-1 mt-8 fz-8 align-middle"
+              @click.prevent="goDetail(`${newItem.id}`)">我有興趣</button>
             </div>
           </div>
         </div>
@@ -132,7 +133,8 @@
           </swiper-slide>
         </swiper>
       </div>
-      <button type="button" class="btnMoreProd btn btn-primary mt-6 mt-md-10 px-6 py-3 rounded-1 fz-8 fw-bold">更多暢銷商品</button>
+      <RouterLink to="/menu" type="button" class="btnMoreProd btn btn-primary mt-6 mt-md-10 px-6 py-3 rounded-1 fz-8 fw-bold"
+      >更多暢銷商品</RouterLink>
     </div>
   </div>
 </template>
@@ -178,6 +180,17 @@ export default {
         .catch(err => {
           console.log(err)
         })
+    },
+    goDetail (id) {
+      this.$router.push({
+        name: 'product-detail',
+        params: {
+          id
+        },
+        query: {
+          page: this.currentPage
+        }
+      })
     }
   },
   mounted () {
@@ -283,15 +296,6 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.social-item {
-  width: 40px;
-  height: 40px;
-  background-color: #666666;
-  &:hover {
-    background-color: #C0362D;
-  }
 }
 
 </style>

@@ -38,9 +38,11 @@
         </ul>
       </div>
       <a class="text-center ml-4 p-2 position-relative" href="#">
-        <span class="material-icons align-middle" style="height: 20px; width: 20px;">shopping_cart</span>
-        <span class="position-absolute top-0 left-100 translate-middle badge p-1 text-bg-grey-d4 rounded-circle" style="height: 24px; width: 24px;">
-          0
+        <span class="material-icons align-middle" style="height: 24px; width: 24px;">shopping_cart</span>
+        <span class="position-absolute top-0 left-100 translate-middle badge text-bg-grey-d4 rounded-circle"
+        :class="{ 'bg-primary': carts.length > 0, 'text-white': carts.length > 0}"
+        style="height: 24px; width: 24px;">
+          {{ carts.length }}
         </span>
       </a>
     </div>
@@ -70,30 +72,44 @@
       </li>
     </ul>
   </div>
+
   <RouterView />
+
   <footer class="container-fluid bg-black">
     <div class="container">
       <div class="row">
         <div class="col-md-6 mt-10 mt-md-8">
           <h5 class="fz-8 fw-normal lh-base text-center text-grey-66 mb-5">追蹤我們近況</h5>
           <ul class="d-flex justify-content-center align-items-center list-unstyled">
-            <li class="social-item rounded-circle p-2 mx-2">
-              <a href="https://www.instagram.com/" target="_blank">
+            <li class="social-item rounded-circle p-2 mx-2"
+              data-bs-toggle="tooltip"
+              data-bs-placement="right"
+              title="Instagram">
+              <a href="https://www.instagram.com/" class="social-link" target="_blank">
                 <img src="../assets/ic_ig.svg" alt="ig">
               </a>
             </li>
-            <li class="social-item rounded-circle p-2 mx-2">
-              <a href="https://line.me/zh-hant/" target="_blank">
+            <li class="social-item rounded-circle p-2 mx-2"
+              data-bs-toggle="tooltip"
+              data-bs-placement="right"
+              title="Line">
+              <a href="https://line.me/zh-hant/" class="social-link" target="_blank">
                 <img src="../assets/ic_line.svg" alt="line">
               </a>
             </li>
-            <li class="social-item rounded-circle p-2 mx-2">
-              <a href="https://zh-tw.facebook.com/" target="_blank">
+            <li class="social-item rounded-circle p-2 mx-2"
+              data-bs-toggle="tooltip"
+              data-bs-placement="right"
+              title="Facebook">
+              <a href="https://zh-tw.facebook.com/" class="social-link" target="_blank">
                 <img src="../assets/ic_fb.svg" alt="fb">
               </a>
             </li>
-            <li class="social-item rounded-circle p-2 mx-2">
-              <a href="https://www.youtube.com/" target="_blank">
+            <li class="social-item rounded-circle p-2 mx-2"
+              data-bs-toggle="tooltip"
+              data-bs-placement="right"
+              title="Youtube">
+              <a href="https://www.youtube.com/" class="social-link" target="_blank">
                 <img src="../assets/ic_yt.svg" alt="yt">
               </a>
             </li>
@@ -134,6 +150,8 @@
 </template>
 
 <script>
+import cartStore from '@/stores/cart'
+import { mapActions, mapState } from 'pinia'
 import { RouterView, RouterLink } from 'vue-router'
 
 export default {
@@ -145,11 +163,18 @@ export default {
   methods: {
     closeCollapsed () {
       this.isCollapsed = true
-    }
+    },
+    ...mapActions(cartStore, ['getCarts'])
   },
   components: {
     RouterView,
     RouterLink
+  },
+  computed: {
+    ...mapState(cartStore, ['carts'])
+  },
+  mounted () {
+    this.getCarts()
   }
 }
 </script>
@@ -181,4 +206,15 @@ export default {
     }
   }
 }
+
+.social-item {
+  list-style: none;
+  width: 40px;
+  height: 40px;
+  background-color: #666666;
+  &:hover {
+    background-color: #C0362D;
+  }
+}
+
 </style>
