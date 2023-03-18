@@ -37,14 +37,14 @@
           </li>
         </ul>
       </div>
-      <a class="text-center ml-4 p-2 position-relative" href="#">
+      <RouterLink to="/cart" class="text-center ml-4 p-2 position-relative">
         <span class="material-icons align-middle" style="height: 24px; width: 24px;">shopping_cart</span>
         <span class="position-absolute top-0 left-100 translate-middle badge text-bg-grey-d4 rounded-circle"
         :class="{ 'bg-primary': carts.length > 0, 'text-white': carts.length > 0}"
         style="height: 24px; width: 24px;">
           {{ carts.length }}
         </span>
-      </a>
+      </RouterLink>
     </div>
   </nav>
   <div class="collapse mt-2 navbar-collapse text-bg-skin" :class="{ show: !isCollapsed }" id="navbarNav">
@@ -214,6 +214,22 @@ export default {
   background-color: #666666;
   &:hover {
     background-color: #C0362D;
+  }
+}
+
+.header-picture {
+  background-color: #F1ECE8;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 40vh;
+}
+
+.btnCustomHover {
+  transition: all .7s ease;
+  &:hover {
+    transform: scale(1.05);
+    background-color: #840000;
   }
 }
 

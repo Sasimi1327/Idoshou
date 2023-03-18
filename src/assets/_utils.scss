@@ -49,6 +49,14 @@ $utilities: map-merge(
 );
 $utilities: map-merge(
   $utilities, (
+    "position": map-merge(
+      map-get($utilities, "position"),
+      ( responsive: true),
+    ),
+  )
+);
+$utilities: map-merge(
+  $utilities, (
     "translate-middle": map-merge(
       map-get( $utilities, "translate-middle"),
       ( responsive: true),

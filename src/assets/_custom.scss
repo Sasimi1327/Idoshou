@@ -29,6 +29,8 @@ $font-sizes: map-merge($font-sizes , $custom-font-sizes);
 
 //spacer
 $custom-spacers: (
+  m1: -1px, //minus
+  m2: -2px,
   0: 0,
   1: $spacer * .25,
   2: $spacer * .5,

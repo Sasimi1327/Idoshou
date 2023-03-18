@@ -133,7 +133,7 @@
           </swiper-slide>
         </swiper>
       </div>
-      <RouterLink to="/menu" type="button" class="btnMoreProd btn btn-primary mt-6 mt-md-10 px-6 py-3 rounded-1 fz-8 fw-bold"
+      <RouterLink to="/menu" type="button" class="btnCustomHover btn btn-primary mt-6 mt-md-10 px-6 py-3 rounded-1 fz-8 fw-bold"
       >更多暢銷商品</RouterLink>
     </div>
   </div>
@@ -275,13 +275,13 @@ export default {
   color: #666666;
 }
 
-.btnMoreProd {
-  transition: all .7s ease;
-  &:hover {
-    transform: scale(1.1);
-    background-color: #840000;
-  }
-}
+// .btnCustomHover {
+//   transition: all .7s ease;
+//   &:hover {
+//     transform: scale(1.05);
+//     background-color: #840000;
+//   }
+// }
 
 .swiper {
   width: 100%;

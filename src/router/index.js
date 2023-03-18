@@ -26,10 +26,32 @@ const routes = [
       {
         path: 'stores',
         component: () => import('../views/StoresInfo.vue')
+      },
+      {
+        path: 'cart',
+        component: () => import('../views/CartView.vue')
+      },
+      {
+        path: 'checkout',
+        component: () => import('../views/CheckoutView.vue')
+      },
+      {
+        path: 'checkOrder/:id',
+        name: 'order-detail',
+        component: () => import('../views/CheckOrderView.vue')
+      },
+      {
+        path: 'complete/:id',
+        name: 'pay-complete',
+        component: () => import('../views/OrderComplete.vue')
       }
     ]
+  },
+  {
+    path: '/:pathMatch(.*)*',
+    name: '404',
+    component: () => import('../views/NotFound.vue')
   }
-
 ]
 
 const router = createRouter({
@@ -37,7 +59,9 @@ const router = createRouter({
   linkActiveClass: 'active',
   scrollBehavior (to, from, savedPosition) {
     // always scroll to top
-    return { top: 0 }
+    return {
+      top: 0
+    }
   },
   routes
 })
