@@ -45,7 +45,7 @@
 </template>
 
 <script>
-
+import Swal from 'sweetalert2'
 const { VITE_URL, VITE_PATH } = import.meta.env
 
 export default {
@@ -62,14 +62,19 @@ export default {
       const url = `${VITE_URL}/api/${VITE_PATH}/order/${id}`
       this.$http.get(url)
         .then(res => {
-          console.log('getOrder[OrderComplete]', res)
           // create_date, id, is_paid, paid_date, total
           this.order = { ...res.data.order }
           this.products = { ...res.data.order.products }
           this.user = { ...res.data.order.user }
         })
         .catch(err => {
-          console.log(err)
+          Swal.fire({
+            position: 'top-end',
+            icon: 'error',
+            title: err.response.data.message,
+            showConfirmButton: false,
+            timer: 1500
+          })
         })
     }
   },

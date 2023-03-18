@@ -140,7 +140,7 @@
 </template>
 
 <script>
-
+import Swal from 'sweetalert2'
 const { VITE_URL, VITE_PATH } = import.meta.env
 
 export default {
@@ -161,7 +161,6 @@ export default {
       const url = `${VITE_URL}/api/${VITE_PATH}/order/${id}`
       this.$http.get(url)
         .then(res => {
-          console.log('getOrder[CheckOrder]', res)
           this.createAt = res.data.order.create_at
           this.orderId = res.data.order.id
           this.products = res.data.order.products
@@ -171,7 +170,13 @@ export default {
           this.is_paid = res.data.order.is_paid
         })
         .catch(err => {
-          console.log(err)
+          Swal.fire({
+            position: 'top-end',
+            icon: 'error',
+            title: err.response.data.message,
+            showConfirmButton: false,
+            timer: 1500
+          })
         })
     },
     payOrder () {
@@ -187,10 +192,31 @@ export default {
                 id
               }
             })
+            Swal.fire({
+              position: 'top-end',
+              icon: 'success',
+              title: '付款成功',
+              showConfirmButton: false,
+              timer: 1500
+            })
+          } else {
+            Swal.fire({
+              position: 'top-end',
+              icon: 'error',
+              title: res.data.message,
+              showConfirmButton: false,
+              timer: 1500
+            })
           }
         })
         .catch(err => {
-          console.log(err)
+          Swal.fire({
+            position: 'top-end',
+            icon: 'error',
+            title: err.response.data.message,
+            showConfirmButton: false,
+            timer: 1500
+          })
         })
     }
   },

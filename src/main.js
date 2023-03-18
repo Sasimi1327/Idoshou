@@ -8,7 +8,6 @@ import * as VeeValidate from 'vee-validate'
 import VeeValidateRules from '@vee-validate/rules'
 import * as VeeValidateI18n from '@vee-validate/i18n'
 
-import $httpMessageState from '@/methods/pushMessageState'
 import { date, currency } from '@/methods/filters'
 
 import './assets/all.scss'
@@ -58,7 +57,6 @@ VeeValidate.configure({
 const pinia = createPinia()
 const app = createApp(App)
 
-app.config.globalProperties.$httpMessageState = $httpMessageState
 app.config.globalProperties.$filters = {
   date,
   currency

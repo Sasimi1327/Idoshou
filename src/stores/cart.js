@@ -25,7 +25,6 @@ const cartStore = defineStore('cart', {
       const url = `${VITE_URL}/api/${VITE_PATH}/cart`
       axios.get(url)
         .then(res => {
-          console.log('購物車列表', res)
           this.carts = res.data.data.carts // 購物車
           this.total = res.data.data.total // 總金額
           this.final_total = res.data.data.final_total // 總金額(含優惠券)
@@ -33,7 +32,7 @@ const cartStore = defineStore('cart', {
           this.loading = false
         })
         .catch(err => {
-          console.log('取得購物車', err)
+          console.log('購物車列表', err)
           this.loading = false
         })
     },
@@ -109,13 +108,6 @@ const cartStore = defineStore('cart', {
           console.log('加入購物車', err)
           this.isAddToCart = false
           this.loading = false
-          // Swal.fire({
-          //   position: 'top-end',
-          //   icon: 'error',
-          //   title: err.response.data.message,
-          //   showConfirmButton: false,
-          //   timer: 1500
-          // })
         })
     },
     updateFinalTotal (price) {

@@ -247,7 +247,6 @@ export default {
       this.$refs.couponModal.modal.show()
     },
     updateCoupon (couponText) {
-      // console.log('輸入優惠券', couponText)
       this.$refs.couponModal.modal.hide()
       this.isLoading = true
       const url = `${VITE_URL}/api/${VITE_PATH}/coupon`
@@ -256,7 +255,6 @@ export default {
       }
       this.$http.post(url, { data })
         .then(res => {
-          console.log('優惠券更新', res)
           this.isCoupon = true
           this.getCarts()
           this.isLoading = false

@@ -149,6 +149,8 @@ import 'swiper/css'
 import 'swiper/css/autoplay'
 import 'swiper/css/pagination'
 
+import Swal from 'sweetalert2'
+
 // import required modules
 import { Pagination, Autoplay } from 'swiper'
 const { VITE_URL, VITE_PATH } = import.meta.env
@@ -178,7 +180,13 @@ export default {
           this.productsPopular = res[1].data.products
         })
         .catch(err => {
-          console.log(err)
+          Swal.fire({
+            position: 'top-end',
+            icon: 'error',
+            title: err.response.data.message,
+            showConfirmButton: false,
+            timer: 1500
+          })
         })
     },
     goDetail (id) {
