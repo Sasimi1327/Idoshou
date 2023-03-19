@@ -18,9 +18,14 @@
                 <h5 class="card-subtitle fz-7 fw-normal lh-base opacity-50 text-grey-66">
                   {{ selectProduct.category }}
                 </h5>
-                <button type="button" class="btn-close"
-                @click="goMenu"
-                ></button>
+
+                <button type="button" class="btn-close hvr-outline-out fz-4"
+                data-bs-toggle="tooltip"
+                data-bs-placement="top"
+                title="回商品列表"
+                @click="goMenu">
+                </button>
+
               </div>
               <div class="mr-6">
                 <h3 class="card-title fz-2 fw-bold mt-3 text-brown">{{ selectProduct.title }}</h3>

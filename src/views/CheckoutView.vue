@@ -148,9 +148,15 @@
           </div>
         </div>
         <div class="text-end">
+          <RouterLink to="/cart" type="button" class="btn btn-outline-primary py-4 px-20 fw-bold mr-4">
+            <i class="fa-solid fa-credit-card mr-1"></i>
+            返回購物車
+          </RouterLink>
           <button type="submit" class="btn btn-primary py-4 px-20 btnCustomHover fw-bold"
-          :disabled="!isComplete"
-          >送出訂單</button>
+          :disabled="!isComplete">
+            <i class="fa-regular fa-rectangle-list mr-1"></i>
+            送出訂單
+          </button>
         </div>
       </v-form>
     </div>

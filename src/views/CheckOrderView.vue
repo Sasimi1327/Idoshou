@@ -132,8 +132,10 @@
 
     <div class="text-end mt-10">
       <button type="submit" class="btn btn-primary py-4 px-20 btnCustomHover fw-bold"
-      @click.prevent="payOrder"
-      >確認結帳</button>
+      @click.prevent="payOrder">
+        <i class="fa-solid fa-clipboard-check mr-1"></i>
+        確認結帳
+      </button>
     </div>
   </div>
 

@@ -32,7 +32,13 @@
   </div>
 
   <div class="d-flex flex-column justify-content-center align-items-center my-10 mb-md-20">
-    <div class='text-secondary border border-2 border-secondary p-15' style="font-size: 80px;">
+    <!-- <div class='text-secondary border border-2 border-secondary p-15' style="font-size: 80px;"> -->
+    <div
+    class='text-secondary border border-2 border-secondary p-15 flow-animate' style="font-size: 80px;">
+      <span> </span>
+      <span> </span>
+      <span> </span>
+      <span> </span>
       <i class="fa-regular fa-circle-check d-inline-block text-center fz-1" style="font-size: 80px;"></i>
       付款成功
     </div>
@@ -83,3 +89,92 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.flow-animate {
+  position: relative;
+  padding: 30px 60px;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.4);
+  color: #44DA2C;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  font: 700 30px consolas;
+  overflow: hidden;
+
+  & span:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to right, #666666, #44DA2C);
+    animation: animate1 2s linear infinite;
+    animation-delay: 1s;
+  }
+  & span:nth-child(2) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 3px;
+    background: linear-gradient(to bottom, #666666, #44DA2C);
+    animation: animate2 2s linear infinite;
+    animation-delay: 2s;
+  }
+  & span:nth-child(3) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(to left, #666666, #44DA2C);
+    animation: animate3 2s linear infinite;
+    animation-delay: 3s;
+  }
+  & span:nth-child(4) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background: linear-gradient(to top, #666666, #44DA2C);
+    animation: animate4 2s linear infinite;
+    animation-delay: 4s;
+  }
+}
+
+@keyframes animate1 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+@keyframes animate2 {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+@keyframes animate3 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes animate4 {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+</style>

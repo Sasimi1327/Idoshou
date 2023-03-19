@@ -7,7 +7,7 @@ import VueAxios from 'vue-axios'
 import * as VeeValidate from 'vee-validate'
 import VeeValidateRules from '@vee-validate/rules'
 import * as VeeValidateI18n from '@vee-validate/i18n'
-
+// Vue Leaflet
 import { LMap, LTileLayer, LMarker, LPopup, LIcon } from '@vue-leaflet/vue-leaflet'
 import 'leaflet/dist/leaflet.css'
 

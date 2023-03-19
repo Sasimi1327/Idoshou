@@ -1,5 +1,5 @@
 <template>
-  <div class="container my-10">
+  <div class="container mb-10">
     <div class="text-center pt-10 mb-10">
       <h2 class="fz-2 lh-sm fw-normal">品牌故事</h2>
     </div>
