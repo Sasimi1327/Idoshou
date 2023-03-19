@@ -186,7 +186,9 @@ export default {
         Swal.fire({
           position: 'top-end',
           icon: 'success',
-          title: '已更新購物車',
+          color: '#C0362D',
+          toast: true,
+          text: '已更新購物車',
           showConfirmButton: false,
           timer: 1500,
           width: 300,
@@ -204,7 +206,9 @@ export default {
         Swal.fire({
           position: 'top-end',
           icon: 'success',
-          title: '已刪除品項',
+          color: '#C0362D',
+          toast: true,
+          text: '已刪除品項',
           showConfirmButton: false,
           timer: 1500,
           width: 300,
@@ -222,7 +226,9 @@ export default {
         Swal.fire({
           position: 'top-end',
           icon: 'success',
-          title: '已清空購物車',
+          color: '#C0362D',
+          toast: true,
+          text: '已清空購物車',
           showConfirmButton: false,
           timer: 1500,
           width: 300,
@@ -261,7 +267,9 @@ export default {
           Swal.fire({
             position: 'top-end',
             icon: 'success',
-            title: '已套用優惠券',
+            color: '#C0362D',
+            toast: true,
+            text: '已套用優惠券',
             showConfirmButton: false,
             timer: 1500,
             width: 300,

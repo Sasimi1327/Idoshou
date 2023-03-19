@@ -211,6 +211,7 @@ export default {
 }
 
 .card {
+  cursor: pointer;
   .card-img-container {
     overflow: hidden;
     position: relative;

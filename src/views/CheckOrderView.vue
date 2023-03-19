@@ -195,7 +195,9 @@ export default {
             Swal.fire({
               position: 'top-end',
               icon: 'success',
-              title: '付款成功',
+              color: '#C0362D',
+              toast: true,
+              text: '付款成功',
               showConfirmButton: false,
               timer: 1500
             })

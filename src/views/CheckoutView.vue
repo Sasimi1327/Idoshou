@@ -200,7 +200,9 @@ export default {
         Swal.fire({
           position: 'top-end',
           icon: 'error',
-          title: '購物車為空',
+          color: '#C0362D',
+          toast: true,
+          text: '購物車為空',
           showConfirmButton: false,
           timer: 3000,
           showClass: {
@@ -222,7 +224,9 @@ export default {
           Swal.fire({
             position: 'top-end',
             icon: 'success',
-            title: '已建立訂單',
+            color: '#C0362D',
+            toast: true,
+            text: '已建立訂單',
             showConfirmButton: false,
             timer: 1500,
             width: 300,

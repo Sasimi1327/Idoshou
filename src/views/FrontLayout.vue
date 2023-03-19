@@ -16,7 +16,7 @@
       </h1>
 
       <div class="d-none d-md-block">
-        <ul class="navbar-nav d-flex ml-auto mb-2 mb-lg-0 ">
+        <ul class="navbar-nav d-flex ml-auto mb-2 mb-l g-0">
           <li class="nav-item">
             <RouterLink to="/story" class="nav-link hvr-pop text-center mx-md-2 p-2" aria-current="page">
                 品牌故事
@@ -39,7 +39,7 @@
       </div>
       <RouterLink to="/cart" class="text-center ml-4 p-2 position-relative">
         <span class="material-icons align-middle" style="height: 24px; width: 24px;">shopping_cart</span>
-        <span class="position-absolute top-0 left-100 translate-middle badge text-bg-grey-d4 rounded-circle"
+        <span class="position-absolute top-0 left-85 translate-middle badge text-bg-grey-d4 rounded-circle"
         :class="{ 'bg-primary': carts.length > 0, 'text-white': carts.length > 0}"
         style="height: 24px; width: 24px;">
           {{ carts.length }}

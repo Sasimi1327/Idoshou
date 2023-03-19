@@ -8,6 +8,9 @@ import * as VeeValidate from 'vee-validate'
 import VeeValidateRules from '@vee-validate/rules'
 import * as VeeValidateI18n from '@vee-validate/i18n'
 
+import { LMap, LTileLayer, LMarker, LPopup, LIcon } from '@vue-leaflet/vue-leaflet'
+import 'leaflet/dist/leaflet.css'
+
 import { date, currency } from '@/methods/filters'
 
 import './assets/all.scss'
@@ -65,6 +68,12 @@ app.config.globalProperties.$filters = {
 app.component('VForm', VeeValidate.Form)
 app.component('VField', VeeValidate.Field)
 app.component('ErrorMessage', VeeValidate.ErrorMessage)
+
+app.component('LMap', LMap)
+app.component('LTileLayer', LTileLayer)
+app.component('LMarker', LMarker)
+app.component('LPopup', LPopup)
+app.component('LIcon', LIcon)
 
 app.use(router)
 

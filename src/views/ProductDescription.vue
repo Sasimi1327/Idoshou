@@ -110,7 +110,9 @@ export default {
         Swal.fire({
           position: 'top-end',
           icon: 'success',
-          title: '已加入購物車',
+          text: '已加入購物車',
+          color: '#C0362D',
+          toast: true,
           width: 300,
           showConfirmButton: false,
           timer: 1500,
@@ -120,6 +122,7 @@ export default {
           hideClass: {
             popup: 'animate__animated animate__fadeOutRight'
           }
+
         })
         this.goMenu()
       }
