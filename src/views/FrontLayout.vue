@@ -37,7 +37,7 @@
           </li>
         </ul>
       </div>
-      <RouterLink to="/cart" class="text-center ml-4 p-2 position-relative">
+      <RouterLink to="/cart" class="text-center ml-4 p-2 position-relative hvr-buzz">
         <span class="material-icons align-middle" style="height: 24px; width: 24px;">shopping_cart</span>
         <span class="position-absolute top-0 left-85 translate-middle badge text-bg-grey-d4 rounded-circle"
         :class="{ 'bg-primary': carts.length > 0, 'text-white': carts.length > 0}"

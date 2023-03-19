@@ -1,17 +1,17 @@
 <template>
-  <div class="d-flex flex-column justify-content-center align-items-center my-10 mb-md-20">
+  <div class="d-flex flex-column justify-content-center align-items-center my-10 my-md-20">
 
-    <div class='text-primary border border-2 border-primary p-15 flow-animate' style="font-size: 80px;">
-      <i class="fa-solid fa-circle-exclamation d-inline-block text-center fz-1" style="font-size: 80px;"></i>
+    <div class='text-primary border border-2 border-primary p-15 flow-animate' style="font-size: 40px;">
+      <i class="fa-solid fa-circle-exclamation d-inline-block text-center" style="font-size: 40px;"></i>
       <span> </span>
       <span> </span>
       <span> </span>
       <span> </span>
       此頁面不存在
     </div>
-    <div class="d-flex justify-content-center mt-10">
-      <RouterLink to="/" type="button" class="btn border text-primary py-4 px-20 btnCustomHover fw-bold mx-4">前往首頁</RouterLink>
-      <RouterLink to="/menu" type="button" class="btn btn-primary py-4 px-20 btnCustomHover fw-bold mx-4">繼續購物</RouterLink>
+    <div class="d-flex justify-content-center mt-20">
+      <RouterLink to="/" type="button" class="btn border text-primary py-4 px-20 btnCustomHover fw-bold mx-4 hvr-push">前往首頁</RouterLink>
+      <RouterLink to="/menu" type="button" class="btn btn-primary py-4 px-20 btnCustomHover fw-bold mx-4 hvr-pop">繼續購物</RouterLink>
     </div>
   </div>
 </template>

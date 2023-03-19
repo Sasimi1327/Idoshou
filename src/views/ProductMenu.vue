@@ -56,7 +56,7 @@
     <div class="container my-10 mb-md-20">
       <div class="row">
         <div class="col-md-6 col-lg-3 mb-8" v-for="product in products" :key="product.id">
-          <div class="card h-100">
+          <div class="card h-100 animate__animated swing-animate">
             <div class="card-img-container">
               <img :src="product.imageUrl" class="card-img-top productImg" :alt="product.id">
             </div>
@@ -102,6 +102,7 @@
 </template>
 
 <script>
+import 'animate.css'
 import LoadingView from 'vue-loading-overlay'
 import 'vue-loading-overlay/dist/css/index.css'
 import Swal from 'sweetalert2'
@@ -234,6 +235,16 @@ export default {
       transform: scale(1.1);
     }
   }
+}
+
+.swing-animate {
+  animation-name: bounceInRight, swing;
+  -webkit-animation-name: bounceInRight, swing;
+  -moz-animation-name: bounceInRight, swing;
+
+  animation-duration: 1s, 2s;
+  -webkit-animation-duration: 1s, 2s;
+  -moz-animation-duration: 1s, 2s;
 }
 
 </style>
