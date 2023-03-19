@@ -222,13 +222,15 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 40vh;
+  height: 25vh;
 }
 
 .btnCustomHover {
   transition: all .7s ease;
+  border: 2px solid #840000;
   &:hover {
     transform: scale(1.05);
+    color: white;
     background-color: #840000;
   }
 }
