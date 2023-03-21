@@ -52,7 +52,7 @@
 
       <template v-else>
         <div class="d-none d-md-block">
-          <ul class="row gx-0 gx-md-3 list-unstyled py-4 mb-0 border border-2 border-bottom-0 border-grey-66 fw-bold">
+          <ul class="row list-unstyled py-4 mb-0 border border-2 border-bottom-0 border-grey-66 fw-bold">
             <li class="col-md-5 text-center">商品資訊</li>
             <li class="col-md-2">單件計價</li>
             <li class="col-md-2">產品數量</li>
@@ -61,7 +61,7 @@
           </ul>
         </div>
 
-        <ul class="row gx-0 gx-md-3 justify-content-center align-items-center list-unstyled p-4 mb-0 border border-2 mb-n-1px border-grey-66 position-relative"
+        <ul class="row justify-content-center align-items-center list-unstyled p-4 mb-0 border border-2 mb-n-1px border-grey-66 position-relative"
           v-for="item in carts" :key="item.id">
           <li class="col-md-5 mb-4 mb-md-0">
             <img :src="item.product.imageUrl" class="img-fluid w-40 h-40 object-fit-cover mr-5" :alt="item.product.title">
@@ -100,7 +100,7 @@
         </ul>
 
         <!-- 操作按鈕 -->
-        <div class="row gx-0 gx-md-3 py-3">
+        <div class="row py-3">
           <div class="col-3">
             <button class="w-100 p-4 bg-white fz-9 fz-md-4 cartBtn"
               type="button"
@@ -137,7 +137,7 @@
           </div>
         </div>
 
-        <div class="row gx-0 gx-md-3 align-items-center">
+        <div class="row align-items-center">
           <div class="col-12 text-end fz-5 fw-normal">
             <span class="fz-4 fw-bold mr-3">總計:</span>
             NT$ {{ this.total }}

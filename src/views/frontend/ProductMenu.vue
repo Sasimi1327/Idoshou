@@ -54,8 +54,8 @@
     </div>
 
     <div class="container my-10 mb-md-20">
-      <div class="row gx-0 gx-md-3">
-        <div class="col-md-6 col-lg-3 mb-8" v-for="product in products" :key="product.id">
+      <div class="row">
+        <div class="col-md-6 col-lg-3 mb-8 overflow-hidden" v-for="product in products" :key="product.id">
           <div class="card h-100 animate__animated swing-animate">
             <div class="card-img-container">
               <img :src="product.imageUrl" class="card-img-top productImg" :alt="product.id">

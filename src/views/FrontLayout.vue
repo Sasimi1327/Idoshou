@@ -73,9 +73,10 @@
     </ul>
   </div>
 
-  <!-- <div class="container"> -->
-  <RouterView />
-  <!-- </div> -->
+  <RouterView v-if="isHomePage" />
+  <div v-else class="container">
+    <RouterView />
+  </div>
 
   <footer class="container-fluid bg-black">
     <div class="container">
@@ -173,7 +174,10 @@ export default {
     RouterLink
   },
   computed: {
-    ...mapState(cartStore, ['carts'])
+    ...mapState(cartStore, ['carts']),
+    isHomePage () {
+      return this.$route.path === '/'
+    }
   },
   mounted () {
     this.getCarts()

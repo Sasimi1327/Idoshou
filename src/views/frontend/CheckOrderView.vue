@@ -38,7 +38,7 @@
 
     <div>
       <div class="d-none d-md-block">
-        <ul class="row gx-0 gx-md-3 list-unstyled py-4 mb-0 border border-2 border-bottom-0 border-grey-66 fw-bold">
+        <ul class="row list-unstyled py-4 mb-0 border border-2 border-bottom-0 border-grey-66 fw-bold">
           <li class="col-md-6 text-center">商品資訊</li>
           <li class="col-md-2">單件計價</li>
           <li class="col-md-2">產品數量</li>
@@ -46,7 +46,7 @@
         </ul>
       </div>
 
-      <div class="row gx-0 gx-md-3 justify-content-center align-items-center list-unstyled p-4 mb-0 border border-2 mb-n-1px border-grey-66 position-relative"
+      <div class="row justify-content-center align-items-center list-unstyled p-4 mb-0 border border-2 mb-n-1px border-grey-66 position-relative"
         v-for="item in products" :key="item.id">
         <li class="col-md-6 mb-4 mb-md-0">
           <img :src="item.product.imageUrl" class="img-fluid w-40 h-40 object-fit-cover mr-5" :alt="item.product.title">
@@ -65,7 +65,7 @@
           NT$ {{ item.final_total }}
         </li>
       </div>
-      <div class="row gx-0 gx-md-3 align-items-center mt-4">
+      <div class="row align-items-center mt-4">
         <div class="col-12 text-end fz-5 fw-normal">
           <span class="fz-4 fw-bold mr-3">總計金額：</span>
           NT$ {{ this.total }}
@@ -77,7 +77,7 @@
       <h2 class="fz-2 lh-sm fw-normal">確認訂單</h2>
     </div>
     <div>
-      <ul class="row gx-0 gx-md-3 align-items-center list-unstyled px-8 py-2 mb-0 border border-2 mb-n-1px border-grey-66 position-relative">
+      <ul class="row align-items-center list-unstyled px-8 py-2 mb-0 border border-2 mb-n-1px border-grey-66 position-relative">
         <li class="col-md-6 d-none d-md-block fz-5 fw-bold my-4 p-4 border-bottom border-grey-d4  align-middle">
           訂單時間
         </li>

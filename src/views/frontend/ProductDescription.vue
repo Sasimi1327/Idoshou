@@ -8,7 +8,7 @@
 
     <div class="container mb-6 mb-md-10">
       <div class="card mb-3" style="100%">
-        <div class="row gx-0 gx-md-3">
+        <div class="row">
           <div class="col-md-5">
             <img :src="selectProduct.imageUrl" class="img-fluid object-fit-cover rounded-start" :alt="selectProduct.title">
           </div>

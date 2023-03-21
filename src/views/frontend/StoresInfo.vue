@@ -5,7 +5,7 @@
     </div>
 
     <div class="card mb-3" style="max-width: 100%;">
-      <div class="row gx-0 gx-md-3 justify-content-center">
+      <div class="row justify-content-center">
         <div class="col-md-10">
           <div id="map"></div>
         </div>
