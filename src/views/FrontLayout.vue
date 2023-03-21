@@ -73,9 +73,9 @@
     </ul>
   </div>
 
-  <div class="container">
-    <RouterView />
-  </div>
+  <!-- <div class="container"> -->
+  <RouterView />
+  <!-- </div> -->
 
   <footer class="container-fluid bg-black">
     <div class="container">

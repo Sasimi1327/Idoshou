@@ -4,7 +4,7 @@
       <h2 class="fz-2 lh-sm fw-normal">品牌故事</h2>
     </div>
 
-    <div class="row">
+    <div class="row gx-0 gx-md-3">
       <div class="col-md-6">
         <p class="mb-10 fz-5 fw-normal lh-base">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我們是一家擁有10多年歷史的老店，位於繁華的都市地段。一直以來秉持著<span class="text-primary">堅持食材、健康、美味的精神</span>，不斷研究和改進，用最新鮮、最優質的食材，製作出健康、美味的菜肴。</p>
         <p class="mb-10 fz-5 fw-normal lh-base">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我們的食材都是用心挑選的，從食材的品質、新鮮程度，到產地、食品安全等方面都做了嚴格的把控，確保每道菜肴的美味和健康。我們的菜品風味多樣，既有傳統的地方菜式，也有創新的西式佳餚，讓顧客品嘗到不同地域的美食文化。</p>

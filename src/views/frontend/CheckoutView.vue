@@ -43,7 +43,7 @@
       </div>
 
       <v-form ref="form" v-slot="{ errors }" @submit="onSubmit">
-        <div class="row">
+        <div class="row gx-0 gx-md-3">
           <div class="col-md-6 mb-6">
             <!-- 姓名：必填 -->
             <div class="form-floating mb-3">

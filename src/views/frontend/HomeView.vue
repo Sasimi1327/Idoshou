@@ -21,7 +21,7 @@
       <h2 data-aos="flip-left" class="fz-2 lh-sm fw-normal">新品上市</h2>
       <span data-aos="flip-left" class="fz-8 lh-base fw-normal">健康新選擇</span>
     </div>
-    <div class="row">
+    <div class="row gx-0 gx-md-3">
       <div class="col-12 mb-4 mb-md-6">
         <div data-aos="zoom-in" class="card bg-dark text-white">
           <img src="../../assets/img_new_banner_w.png" class="card-img d-none d-md-block" alt="...">
