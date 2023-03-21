@@ -114,7 +114,7 @@
               type="button"
               @click="$router.push('/menu')">
               <i class="fa-solid fa-bag-shopping mr-1"></i>
-              繼續選購商品
+              繼續選購
             </button>
           </div>
           <div class="col-3">

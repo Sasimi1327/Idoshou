@@ -7,43 +7,65 @@ const routes = [
     children: [
       {
         path: '',
-        component: () => import('../views/HomeView.vue')
+        component: () => import('../views/frontend/HomeView.vue')
       },
       {
         path: 'story',
-        component: () => import('../views/BrandStory.vue')
+        component: () => import('../views/frontend/BrandStory.vue')
       },
       {
         path: 'menu',
         name: 'product-list',
-        component: () => import('../views/ProductMenu.vue')
+        component: () => import('../views/frontend/ProductMenu.vue')
       },
       {
         path: 'detail/:id',
         name: 'product-detail',
-        component: () => import('../views/ProductDescription.vue')
+        component: () => import('../views/frontend/ProductDescription.vue')
       },
       {
         path: 'stores',
-        component: () => import('../views/StoresInfo.vue')
+        component: () => import('../views/frontend/StoresInfo.vue')
       },
       {
         path: 'cart',
-        component: () => import('../views/CartView.vue')
+        component: () => import('../views/frontend/CartView.vue')
       },
       {
         path: 'checkout',
-        component: () => import('../views/CheckoutView.vue')
+        component: () => import('../views/frontend/CheckoutView.vue')
       },
       {
         path: 'checkOrder/:id',
         name: 'order-detail',
-        component: () => import('../views/CheckOrderView.vue')
+        component: () => import('../views/frontend/CheckOrderView.vue')
       },
       {
         path: 'complete/:id',
         name: 'pay-complete',
-        component: () => import('../views/OrderComplete.vue')
+        component: () => import('../views/frontend/OrderComplete.vue')
+      },
+      {
+        path: 'login',
+        component: () => import('../views/frontend/LoginPage.vue')
+      }
+    ]
+  },
+  {
+    path: '/admin',
+    component: () => import('../views/DashboardLayout.vue'),
+    children: [
+      {
+        path: 'products',
+        component: () => import('../views/admin/AdminProducts.vue')
+      },
+      {
+        path: 'orders',
+        component: () => import('../views/admin/AdminOrders.vue')
+      },
+      {
+        path: 'coupons',
+        component: () => import('../views/admin/AdminCoupons.vue')
       }
     ]
   },

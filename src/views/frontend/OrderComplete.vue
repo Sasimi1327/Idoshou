@@ -94,7 +94,7 @@ export default {
 .flow-animate {
   position: relative;
   padding: 30px 60px;
-  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
   color: #44DA2C;
   text-decoration: none;
   text-transform: uppercase;
@@ -108,9 +108,9 @@ export default {
     left: 0;
     width: 100%;
     height: 3px;
-    background: linear-gradient(to right, #666666, #44DA2C);
-    animation: animate1 2s linear infinite;
-    animation-delay: 1s;
+    background: linear-gradient(to right, white, #44DA2C);
+    animation: animate1 1s linear infinite;
+    animation-delay: 3s;
   }
   & span:nth-child(2) {
     position: absolute;
@@ -118,9 +118,9 @@ export default {
     right: 0;
     height: 100%;
     width: 3px;
-    background: linear-gradient(to bottom, #666666, #44DA2C);
-    animation: animate2 2s linear infinite;
-    animation-delay: 2s;
+    background: linear-gradient(to right, white, #44DA2C);
+    animation: animate2 1s linear infinite;
+    animation-delay: -1s;
   }
   & span:nth-child(3) {
     position: absolute;
@@ -128,9 +128,9 @@ export default {
     right: 0;
     width: 100%;
     height: 3px;
-    background: linear-gradient(to left, #666666, #44DA2C);
-    animation: animate3 2s linear infinite;
-    animation-delay: 3s;
+    background: linear-gradient(to right, white, #44DA2C);
+    animation: animate3 1s linear infinite;
+    animation-delay: -2s;
   }
   & span:nth-child(4) {
     position: absolute;
@@ -138,9 +138,9 @@ export default {
     left: 0;
     height: 100%;
     width: 3px;
-    background: linear-gradient(to top, #666666, #44DA2C);
-    animation: animate4 2s linear infinite;
-    animation-delay: 4s;
+    background: linear-gradient(to top, white, #44DA2C);
+    animation: animate4 1s linear infinite;
+    animation-delay: -3s;
   }
 }
 

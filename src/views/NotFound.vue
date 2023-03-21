@@ -20,7 +20,7 @@
 .flow-animate {
   position: relative;
   padding: 30px 60px;
-  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
   color: #C0362D;
   text-decoration: none;
   text-transform: uppercase;
@@ -34,7 +34,7 @@
     right: 0;
     width: 100%;
     height: 3px;
-    background: linear-gradient(to right, #666666, #C0362D);
+    background: linear-gradient(to right, white, #C0362D);
     animation: animate1 2s linear infinite;
     animation-delay: 1s;
   }
@@ -44,7 +44,7 @@
     right: 0;
     height: 100%;
     width: 3px;
-    background: linear-gradient(to bottom, #666666, #C0362D);
+    background: linear-gradient(to bottom, white, #C0362D);
     animation: animate2 2s linear infinite;
     animation-delay: 2s;
   }
@@ -54,7 +54,7 @@
     right: 0;
     width: 100%;
     height: 3px;
-    background: linear-gradient(to left, #666666, #C0362D);
+    background: linear-gradient(to left, white, #C0362D);
     animation: animate3 2s linear infinite;
     animation-delay: 3s;
   }
@@ -64,7 +64,7 @@
     left: 0;
     height: 100%;
     width: 3px;
-    background: linear-gradient(to top, #666666, #C0362D);
+    background: linear-gradient(to top, white, #C0362D);
     animation: animate4 2s linear infinite;
     animation-delay: 4s;
   }

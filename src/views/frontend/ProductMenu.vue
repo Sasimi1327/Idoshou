@@ -8,7 +8,7 @@
 
     <div class="container-fluid header-picture position-relative">
       <div class="container">
-        <ul class="position-absolute list-unstyled d-flex justify-content-center align-items-center top-50 left-5 translate-middle-y py-4 border border-1 border-dark">
+        <ul class="position-absolute list-unstyled d-flex justify-content-center align-items-center top-50 left-0 translate-middle-y py-4 border border-1 border-dark">
           <li value="全部商品" class="category word-nowrap px-5 py-3 fz-6"
             @click="updateCategory('全部商品')"
             :class="{ active: category === '全部商品'}">
@@ -106,7 +106,7 @@ import 'animate.css'
 import LoadingView from 'vue-loading-overlay'
 import 'vue-loading-overlay/dist/css/index.css'
 import Swal from 'sweetalert2'
-import PaginationView from '../components/PaginationView.vue'
+import PaginationView from '../../components/PaginationView.vue'
 
 const { VITE_URL, VITE_PATH } = import.meta.env
 

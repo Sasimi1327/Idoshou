@@ -148,7 +148,7 @@
           </div>
         </div>
         <div class="text-end">
-          <RouterLink to="/cart" type="button" class="btn btn-outline-primary py-4 px-20 fw-bold mr-4 hvr-bob">
+          <RouterLink to="/cart" type="button" class="btn btn-outline-primary py-4 px-20 fw-bold mr-md-4 mb-4 mb-md-0 hvr-bob">
             <i class="fa-solid fa-credit-card mr-1"></i>
             返回購物車
           </RouterLink>

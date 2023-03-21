@@ -2,12 +2,12 @@
   <div class="container-fluid position-relative overflow-hidden">
     <div class="text-bg-skin hero-content"></div>
     <div class="bg-primary hero-footer"></div>
-    <img src="../assets/img_kv_w.svg" class="img-fluid position-absolute bottom-0 left-50 translate-middle-x d-none d-md-block" alt="hero pc">
-    <img src="../assets/img_kv_m.svg" class="mb-3 object-fit-contain position-absolute bottom-0 left-50 translate-middle-x d-md-none" alt="hero mobile">
+    <img src="@/assets/img_kv_w.svg" class="img-fluid position-absolute bottom-0 left-50 translate-middle-x d-none d-md-block" alt="hero pc">
+    <img src="@/assets/img_kv_m.svg" class="mb-3 object-fit-contain position-absolute bottom-0 left-50 translate-middle-x d-md-none" alt="hero mobile">
     <div class="container">
       <div class="d-flex align-items-center">
-        <img src="../assets/slogan_w.svg" class="position-absolute top-50 left-0 translate-middle-y d-none d-md-block" alt="slogan pc">
-        <img src="../assets/slogan_m.svg" class="position-absolute top-25 left-50 translate-middle d-md-none" alt="slogan mobile">
+        <img src="../../assets/slogan_w.svg" class="position-absolute top-50 left-0 translate-middle-y d-none d-md-block" alt="slogan pc">
+        <img src="../../assets/slogan_m.svg" class="position-absolute top-25 left-50 translate-middle d-md-none" alt="slogan mobile">
       </div>
     </div>
     <RouterLink to="/menu" type="button" class="btn-order hvr-pulse-grow position-absolute bottom-10 right-5">
@@ -21,11 +21,11 @@
       <h2 data-aos="flip-left" class="fz-2 lh-sm fw-normal">新品上市</h2>
       <span data-aos="flip-left" class="fz-8 lh-base fw-normal">健康新選擇</span>
     </div>
-    <div class="row g-0">
+    <div class="row">
       <div class="col-12 mb-4 mb-md-6">
         <div data-aos="zoom-in" class="card bg-dark text-white">
-          <img src="../assets/img_new_banner_w.png" class="card-img d-none d-md-block" alt="...">
-          <img src="../assets/img_new_banner_m.png" class="card-img d-md-none" alt="...">
+          <img src="../../assets/img_new_banner_w.png" class="card-img d-none d-md-block" alt="...">
+          <img src="../../assets/img_new_banner_m.png" class="card-img d-md-none" alt="...">
           <div class="card-img-overlay">
             <div class="position-absolute top-25 left-30 top-md-30 left-md-20">
               <h5 class="card-subtitle fz-5 fw-normal text-center">美味多層次</h5>
@@ -57,9 +57,9 @@
     <div class="container recommand">
       <div class="row">
         <div class="col-12 text-center mb-md-20">
-          <img src="../assets/img_title_recommend_lemon.png"
+          <img src="../../assets/img_title_recommend_lemon.png"
         class="img-fluid d-none d-md-block" alt="recommend pc">
-          <img src="../assets/recommend.png"
+          <img src="../../assets/recommend.png"
         class="img-fluid d-md-none" alt="recommend mobile">
         </div>
       </div>
@@ -69,9 +69,9 @@
   <div class="book-menu1">
     <div class="container-fluid-md container">
       <div class="col-md-6 ml-auto py-10 py-md-20" style="background-color: rgba(24, 24, 24, 0.8);">
-        <div data-aos="fade-left"
-            data-aos-offset="300"
-            data-aos-easing="ease-in-sine"
+        <div data-aos="fade-down"
+            data-aos-easing="linear"
+            data-aos-duration="1500"
             class="w-65 d-flex flex-column justify-content-center text-center mx-auto">
           <h3 class="text-primary fz-2 fw-normal mb-6">精緻餐盒</h3>
           <h4 class="text-white fz-6 lh-base fw-normal mb-10 px-0 px-md-10">追求卓越，用最好的食材打造最精緻的菜品，為您呈現極致的美食饗宴</h4>
@@ -85,9 +85,9 @@
   <div class="book-menu2">
     <div class="container-fluid-md container">
       <div class="col-md-6 mr-auto py-10 py-md-20" style="background-color: rgba(24, 24, 24, 0.8);">
-        <div data-aos="fade-right"
-            data-aos-offset="300"
-            data-aos-easing="ease-in-sine"
+        <div data-aos="fade-up"
+            data-aos-easing="linear"
+            data-aos-duration="1500"
             class="w-65 d-flex flex-column justify-content-center text-center mx-auto">
           <h3 class="text-primary fz-2 fw-normal mb-6">點心飲品</h3>
           <h4 class="text-white fz-6 lh-base fw-normal mb-10 px-0 px-md-10">每人都擁有不同的甜蜜滋味，我們融入創意甜點中，為您帶來舌尖上的驚喜！</h4>
@@ -277,14 +277,14 @@ export default {
 
 .book {
   &-menu1 {
-    background-image: url('../assets/bg_booking_1.png');
+    background-image: url('../../assets/bg_booking_1.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
   }
   &-menu2 {
     height: auto;
-    background-image: url('../assets/bg_booking_2.png');
+    background-image: url('../../assets/bg_booking_2.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -294,14 +294,6 @@ export default {
 .text-grey-66 {
   color: #666666;
 }
-
-// .btnCustomHover {
-//   transition: all .7s ease;
-//   &:hover {
-//     transform: scale(1.05);
-//     background-color: #840000;
-//   }
-// }
 
 .swiper {
   width: 100%;
