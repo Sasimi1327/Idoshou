@@ -4,52 +4,61 @@
                 :can-cancel="false"
                 :color="color"
                 :loader="'bars'"
-                :is-full-page="fullPage"/>
+                :is-full-page="true"/>
 
-    <div class="container-fluid header-picture position-relative">
+    <div class="container-fluid header-picture d-flex flex-column justify-content-center">
       <div class="container">
-        <ul class="position-absolute list-unstyled d-flex justify-content-center align-items-center top-50 left-0 translate-middle-y py-4 border border-1 border-dark">
-          <li value="全部商品" class="category word-nowrap px-5 py-3 fz-6"
-            @click="updateCategory('全部商品')"
-            :class="{ active: category === '全部商品'}">
+        <div class="row list-unstyled mb-0 justify-content-center align-items-center border border-1 border-dark text-center">
+          <div class="col category word-nowrap py-3 fz-6"
+          value="全部商品"
+          @click="updateCategory('全部商品')"
+          :class="{ active: category === '全部商品'}">
             全部商品
-          </li>
-          <li value="新品上市" class="category word-nowrap px-5 py-3 fz-6"
-            @click="updateCategory('新品上市')"
-            :class="{ active: category === '新品上市'}">
+          </div>
+          <div class="col category word-nowrap py-3 fz-6"
+          value="新品上市"
+          @click="updateCategory('新品上市')"
+          :class="{ active: category === '新品上市'}">
             新品上市
-          </li>
-          <li value="主廚推薦" class="category word-nowrap px-5 py-3 fz-6"
-            @click="updateCategory('主廚推薦')"
-            :class="{ active: category === '主廚推薦'}">
+          </div>
+          <div class="col category word-nowrap py-3 fz-6"
+          value="主廚推薦"
+          @click="updateCategory('主廚推薦')"
+          :class="{ active: category === '主廚推薦'}">
             主廚推薦
-          </li>
-          <li value="暢銷商品" class="category word-nowrap px-5 py-3 fz-6"
-            @click="updateCategory('暢銷商品')"
-            :class="{ active: category === '暢銷商品'}">
+          </div>
+          <div class="col category word-nowrap py-3 fz-6"
+          value="暢銷商品"
+          @click="updateCategory('暢銷商品')"
+          :class="{ active: category === '暢銷商品'}">
             暢銷商品
-          </li>
-          <li value="主菜尚品" class="category word-nowrap px-5 py-3 fz-6"
-            @click="updateCategory('主菜尚品')"
-            :class="{ active: category === '主菜尚品'}">
+          </div>
+          <div class="col category word-nowrap py-3 fz-6"
+          value="主菜尚品"
+          @click="updateCategory('主菜尚品')"
+          :class="{ active: category === '主菜尚品'}">
             主菜尚品
-          </li>
-          <li value="經典名菜" class="category word-nowrap px-5 py-3 fz-6"
-            @click="updateCategory('經典名菜')"
-            :class="{ active: category === '經典名菜'}">
+          </div>
+          <div class="col category word-nowrap py-3 fz-6"
+          value="經典名菜"
+          @click="updateCategory('經典名菜')"
+          :class="{ active: category === '經典名菜'}">
             經典名菜
-          </li>
-          <li value="點心飲品" class="category word-nowrap px-5 py-3 fz-6"
-            @click="updateCategory('點心飲品')"
-            :class="{ active: category === '點心飲品'}">
+          </div>
+          <div class="col category word-nowrap py-3 fz-6"
+          value="點心飲品"
+          @click="updateCategory('點心飲品')"
+          :class="{ active: category === '點心飲品'}">
             點心飲品
-          </li>
-          <li value="精緻餐盒" class="category word-nowrap px-5 py-3 fz-6"
-            @click="updateCategory('精緻餐盒')"
-            :class="{ active: category === '精緻餐盒'}">
+          </div>
+          <div class="col category word-nowrap py-3 fz-6"
+          value="精緻餐盒"
+          @click="updateCategory('精緻餐盒')"
+          :class="{ active: category === '精緻餐盒'}">
             精緻餐盒
-          </li>
-        </ul>
+          </div>
+        </div>
+
       </div>
     </div>
 
