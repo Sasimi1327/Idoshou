@@ -5,31 +5,32 @@
                 :color="color"
                 :loader="'bars'"
                 :is-full-page="true"/>
-    <div class="container-fluid header-picture position-relative">
+
+    <div class="container-fluid header-picture d-flex flex-column justify-content-center">
       <div class="container">
-        <ul class="list-unstyled position-absolute d-flex justify-content-center align-items-center top-50 left-50 translate-middle py-4 border border-1 border-dark text-center">
-          <li class="mx-2 px-3 py-3 fz-6 word-nowrap text-primary">
+        <ul class="row list-unstyled mb-0 justify-content-center align-items-center border border-1 border-dark text-center align-top">
+          <li class="col-2 py-3 fz-6 word-nowrap text-primary">
             Step.1
             <div>購物車</div>
           </li>
-          <li class="mx-2 px-1 py-3 fz-6 text-primary">
+          <li class="col-1 py-3 fz-6 text-primary">
             <i class="fa-solid fa-arrow-right"></i>
           </li>
-          <li class="mx-2 px-3 py-3 fz-6 word-nowrap text-primary">
+          <li class="col-2 py-3 fz-6 word-nowrap text-primary">
             Step.2
             <div>訂單資訊</div>
           </li>
-          <li class="mx-2 px-1 py-3 fz-6 text-grey-66 opacity-50">
+          <li class="col-1 py-3 fz-6 text-grey-66 opacity-50">
             <i class="fa-solid fa-arrow-right"></i>
           </li>
-          <li class="mx-2 px-3 py-3 fz-6 word-nowrap text-grey-66 opacity-50">
+          <li class="col-2 py-3 fz-6 word-nowrap text-grey-66 opacity-50">
             Step.3
             <div>確認訂單</div>
           </li>
-          <li class="mx-2 px-1 py-3 fz-6 text-grey-66 opacity-50">
+          <li class="col-1 py-3 fz-6 text-grey-66 opacity-50">
             <i class="fa-solid fa-arrow-right"></i>
           </li>
-          <li class="mx-2 px-3 py-3 fz-6 word-nowrap text-grey-66 opacity-50">
+          <li class="col-2 py-3 fz-6 word-nowrap text-grey-66 opacity-50">
             Step.4
             <div>完成訂單</div>
           </li>

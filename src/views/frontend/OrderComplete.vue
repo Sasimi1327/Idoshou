@@ -1,29 +1,29 @@
 <template>
-  <div class="container-fluid header-picture position-relative">
+  <div class="container-fluid header-picture d-flex flex-column justify-content-center">
     <div class="container">
-      <ul class="list-unstyled position-absolute d-flex justify-content-center align-items-center top-50 left-50 translate-middle py-4 border border-1 border-dark text-center">
-        <li class="mx-2 px-3 py-3 fz-6 word-nowrap text-primary">
+      <ul class="row list-unstyled mb-0 justify-content-center align-items-center border border-1 border-dark text-center align-top">
+        <li class="col-2 py-3 fz-6 word-nowrap text-primary">
           Step.1
           <div>購物車</div>
         </li>
-        <li class="mx-2 px-1 py-3 fz-6 text-primary">
+        <li class="col-1 py-3 fz-6 text-primary">
           <i class="fa-solid fa-arrow-right"></i>
         </li>
-        <li class="mx-2 px-3 py-3 fz-6 word-nowrap text-primary">
+        <li class="col-2 py-3 fz-6 word-nowrap text-primary">
           Step.2
           <div>訂單資訊</div>
         </li>
-        <li class="mx-2 px-1 py-3 fz-6 text-primary">
+        <li class="col-1 py-3 fz-6 text-primary">
           <i class="fa-solid fa-arrow-right"></i>
         </li>
-        <li class="mx-2 px-3 py-3 fz-6 word-nowrap text-primary">
+        <li class="col-2 py-3 fz-6 word-nowrap text-primary">
           Step.3
           <div>確認訂單</div>
         </li>
-        <li class="mx-2 px-1 py-3 fz-6 text-primary">
+        <li class="col-1 py-3 fz-6 text-primary">
           <i class="fa-solid fa-arrow-right"></i>
         </li>
-        <li class="mx-2 px-3 py-3 fz-6 word-nowrap text-primary">
+        <li class="col-2 py-3 fz-6 word-nowrap text-primary">
           Step.4
           <div>完成訂單</div>
         </li>
@@ -32,19 +32,17 @@
   </div>
 
   <div class="d-flex flex-column justify-content-center align-items-center my-10 mb-md-20">
-    <!-- <div class='text-secondary border border-2 border-secondary p-15' style="font-size: 80px;"> -->
-    <div
-    class='text-secondary border border-2 border-secondary p-15 flow-animate' style="font-size: 40px;">
+    <div class='text-secondary border border-2 border-secondary p-10 flow-success-animate' style="font-size: 36px;">
       <span> </span>
       <span> </span>
       <span> </span>
       <span> </span>
-      <i class="fa-regular fa-circle-check d-inline-block text-center" style="font-size: 40px;"></i>
+      <i class="fa-regular fa-circle-check d-inline-block text-center" style="font-size: 36px;"></i>
       付款成功
     </div>
     <div class="d-flex justify-content-center mt-20">
-      <RouterLink to="/" type="button" class="btn py-4 px-20 btnCustomHover fw-bold mx-4 hvr-push">前往首頁</RouterLink>
-      <RouterLink to="/menu" type="button" class="btn btn-primary py-4 px-20 btnCustomHover fw-bold hvr-pop mx-4">繼續購物</RouterLink>
+      <RouterLink to="/" type="button" class="btn border-primary p-4 btnCustomHover fw-bold mx-4 hvr-push">前往首頁</RouterLink>
+      <RouterLink to="/menu" type="button" class="btn btn-primary p-4 btnCustomHover fw-bold hvr-pop mx-4">繼續購物</RouterLink>
     </div>
   </div>
 
@@ -91,7 +89,7 @@ export default {
 </script>
 
 <style lang="scss">
-.flow-animate {
+.flow-success-animate {
   position: relative;
   padding: 30px 60px;
   box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
@@ -109,8 +107,7 @@ export default {
     width: 100%;
     height: 3px;
     background: linear-gradient(to right, white, #44DA2C);
-    animation: animate1 1s linear infinite;
-    animation-delay: 3s;
+    animation: animate1 2s linear infinite;
   }
   & span:nth-child(2) {
     position: absolute;
@@ -119,8 +116,8 @@ export default {
     height: 100%;
     width: 3px;
     background: linear-gradient(to right, white, #44DA2C);
-    animation: animate2 1s linear infinite;
-    animation-delay: -1s;
+    animation: animate2 2s linear infinite;
+    animation-delay: 1s;
   }
   & span:nth-child(3) {
     position: absolute;
@@ -129,8 +126,7 @@ export default {
     width: 100%;
     height: 3px;
     background: linear-gradient(to right, white, #44DA2C);
-    animation: animate3 1s linear infinite;
-    animation-delay: -2s;
+    animation: animate3 2s linear infinite;
   }
   & span:nth-child(4) {
     position: absolute;
@@ -139,8 +135,8 @@ export default {
     height: 100%;
     width: 3px;
     background: linear-gradient(to top, white, #44DA2C);
-    animation: animate4 1s linear infinite;
-    animation-delay: -3s;
+    animation: animate4 2s linear infinite;
+    animation-delay: 1s;
   }
 }
 

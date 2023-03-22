@@ -6,31 +6,31 @@
                 :loader="'bars'"
                 :is-full-page="true"/>
 
-    <div class="container-fluid header-picture position-relative">
+    <div class="container-fluid header-picture d-flex flex-column justify-content-center">
       <div class="container">
-        <ul class="list-unstyled position-absolute d-flex justify-content-center align-items-center top-50 left-50 translate-middle py-4 border border-1 border-dark text-center">
-          <li class="mx-2 px-3 py-3 fz-6 word-nowrap text-primary">
+        <ul class="row list-unstyled mb-0 justify-content-center align-items-center border border-1 border-dark text-center align-top">
+          <li class="col-2 py-3 fz-6 word-nowrap text-primary">
             Step.1
             <div>購物車</div>
           </li>
-          <li class="mx-2 px-1 py-3 fz-6 text-grey-66 opacity-50">
+          <li class="col-1 py-3 fz-6 text-grey-66 opacity-50">
             <i class="fa-solid fa-arrow-right"></i>
           </li>
-          <li class="mx-2 px-3 py-3 fz-6 word-nowrap text-grey-66 opacity-50">
+          <li class="col-2 py-3 fz-6 word-nowrap text-grey-66 opacity-50">
             Step.2
             <div>訂單資訊</div>
           </li>
-          <li class="mx-2 px-1 py-3 fz-6 text-grey-66 opacity-50">
+          <li class="col-1 py-3 fz-6 text-grey-66 opacity-50">
             <i class="fa-solid fa-arrow-right"></i>
           </li>
-          <li class="mx-2 px-3 py-3 fz-6 word-nowrap text-grey-66 opacity-50">
+          <li class="col-2 py-3 fz-6 word-nowrap text-grey-66 opacity-50">
             Step.3
             <div>確認訂單</div>
           </li>
-          <li class="mx-2 px-1 py-3 fz-6 text-grey-66 opacity-50">
+          <li class="col-1 py-3 fz-6 text-grey-66 opacity-50">
             <i class="fa-solid fa-arrow-right"></i>
           </li>
-          <li class="mx-2 px-3 py-3 fz-6 word-nowrap text-grey-66 opacity-50">
+          <li class="col-2 py-3 fz-6 word-nowrap text-grey-66 opacity-50">
             Step.4
             <div>完成訂單</div>
           </li>
@@ -61,7 +61,7 @@
           </ul>
         </div>
 
-        <ul class="row justify-content-center align-items-center list-unstyled p-4 mb-0 border border-2 mb-n-1px border-grey-66 position-relative"
+        <ul class="row justify-content-center align-items-center list-unstyled p-4 mb-0 border border-1 mb-n-1px border-grey-66 position-relative"
           v-for="item in carts" :key="item.id">
           <li class="col-md-5 mb-4 mb-md-0">
             <img :src="item.product.imageUrl" class="img-fluid w-40 h-40 object-fit-cover mr-5" :alt="item.product.title">
@@ -99,7 +99,6 @@
           </li>
         </ul>
 
-        <!-- 操作按鈕 -->
         <div class="row py-3">
           <div class="col-3">
             <button class="w-100 p-4 bg-white fz-9 fz-md-4 cartBtn"
@@ -148,7 +147,6 @@
             NT$ {{ this.final_total }}
           </div>
         </div>
-
       </template>
     </div>
 

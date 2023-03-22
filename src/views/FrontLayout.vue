@@ -39,7 +39,7 @@
       </div>
       <RouterLink to="/cart" class="text-center ml-4 p-2 position-relative">
         <span class="material-icons align-middle" style="height: 24px; width: 24px;">shopping_cart</span>
-        <span class="position-absolute top-0 left-85 translate-middle badge text-bg-grey-d4 rounded-circle"
+        <span class="position-absolute top-0 left-75 translate-middle badge text-bg-grey-d4 rounded-circle"
         :class="{ 'bg-primary': carts.length > 0, 'text-white': carts.length > 0}"
         style="height: 24px; width: 24px;">
           {{ carts.length }}
@@ -125,20 +125,19 @@
           </div>
         </div>
         <address class="col-md-12 mt-12 text-center">
-
-          <span class="border border-white text-white py-2 px-4">
-            <nobr>
-              # 若有大型團購訂餐，請提前一天來電告知，方便備料取餐。
-            </nobr>
-          </span>
-          <div class="d-flex flex-column flex-md-row justify-content-center align-items-center mt-6">
-            <div class="text-white mr-0 mb-4 mr-md-6 mb-md-0 fz-8 fw-normal lh-base">
-              <span class="material-icons align-middle mr-1">location_on</span>
-              112 台北市北投區西安街一段 27 號
+          <div class="d-flex flex-column align-items-center">
+            <div class="border border-white text-white py-2 px-4">
+                # 若有大型團購訂餐，請提前一天來電告知，方便備料取餐。
             </div>
-            <div class="text-white fz-8 fw-normal lh-base">
-              <span class="material-icons align-middle mr-1">schedule</span>
-              平日 12:00~21:30  周末及國定假日 11:30~21:30
+            <div class="d-flex flex-column flex-md-row justify-content-center align-items-center mt-6">
+              <div class="text-white mr-0 mb-4 mr-md-6 mb-md-0 fz-8 fw-normal lh-base">
+                <span class="material-icons align-middle mr-1">location_on</span>
+                112 台北市北投區西安街一段 27 號
+              </div>
+              <div class="text-white fz-8 fw-normal lh-base">
+                <span class="material-icons align-middle mr-1">schedule</span>
+                平日 12:00~21:30  周末及國定假日 11:30~21:30
+              </div>
             </div>
           </div>
         </address>
