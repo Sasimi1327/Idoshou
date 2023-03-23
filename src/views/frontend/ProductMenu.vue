@@ -65,7 +65,7 @@
     <div class="container my-10 mb-md-20">
       <div class="row">
         <div class="col-md-6 col-lg-3 mb-8 overflow-hidden" v-for="product in products" :key="product.id">
-          <div class="card h-100 animate__animated swing-animate">
+          <div class="card h-100 animate__animated swing-animate" @click.prevent="goDetail(`${product.id}`)">
             <div class="card-img-container">
               <img :src="product.imageUrl" class="card-img-top productImg" :alt="product.id">
             </div>
@@ -91,12 +91,7 @@
               </p>
             </div>
             <div class="card-footer border-0 bg-white text-end">
-              <!-- <RouterLink :to="`/detail/${product.id}`"
-              @click="goDetail(`/detail/${product.id}`)"
-              type="button" class="w-100 btn btn-primary stretched-link mb-5">加入購物車</RouterLink>
-              -->
-              <button @click.prevent="goDetail(`${product.id}`)"
-              type="button" class="w-100 btn btn-primary btnCustomHover stretched-link mb-5">加入購物車</button>
+              <button type="button" class="w-100 btn btn-primary btnCustomHover stretched-link mb-5">加入購物車</button>
             </div>
           </div>
         </div>

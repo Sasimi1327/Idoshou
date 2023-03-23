@@ -43,7 +43,7 @@
         </div>
 
         <div class="col-md-4 mb-4 mb-md-0" v-for="newItem in productsNew" :key="newItem.id">
-          <div data-aos="zoom-in-up" class="card card-image bg-dark text-white">
+          <div data-aos="zoom-in-up" class="card card-image bg-dark text-white" @click.prevent="goDetail(`${newItem.id}`)">
             <div class="card-img-container">
               <img :src="newItem.imageUrl" class="card-img productImg" :alt="newItem.id">
             </div>
@@ -52,7 +52,7 @@
                 <h5 class="card-subtitle fz-7 fw-normal">{{ newItem.unit }}</h5>
                 <h3 class="card-title fz-2 fw-bold mt-2">{{ newItem.title }}</h3>
                 <button type="button" class="btn-like stretched-link btn btn-white py-2 px-4 rounded-1 mt-8 fz-8 align-middle hvr-wobble-horizontal"
-                @click.prevent="goDetail(`${newItem.id}`)">我有興趣</button>
+                >我有興趣</button>
               </div>
             </div>
           </div>
@@ -273,6 +273,7 @@ export default {
 
 .card-image {
   &:hover {
+    cursor: pointer;
     .card-img {
       filter: brightness(80%);
     }
