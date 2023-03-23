@@ -11,7 +11,7 @@
       </button>
 
       <h1 class=" mx-auto mr-md-auto ml-md-0">
-        <a href="#" class="navbar-brand logo hvr-grow-rotate"
+        <a href="#" class="navbar-brand mr-0 logo hvr-grow-rotate"
         @click="closeCollapsed">伊多賞</a>
       </h1>
 
@@ -159,14 +159,23 @@ import { RouterView, RouterLink } from 'vue-router'
 export default {
   data () {
     return {
-      isCollapsed: true
+      isCollapsed: true,
+      innerWidth: window.innerWidth
     }
   },
   methods: {
     closeCollapsed () {
       this.isCollapsed = true
     },
-    ...mapActions(cartStore, ['getCarts'])
+    ...mapActions(cartStore, ['getCarts']),
+    handleResize () {
+      this.windowWidth = window.innerWidth
+
+      // 如果當前寬度大於漢堡選單顯示的閾值，就隱藏漢堡選單
+      if (this.windowWidth >= 768) {
+        this.isCollapsed = true
+      }
+    }
   },
   components: {
     RouterView,
@@ -177,6 +186,12 @@ export default {
     isHomePage () {
       return this.$route.path === '/'
     }
+  },
+  created () { // 監視視窗大小
+    window.addEventListener('resize', this.handleResize)
+  },
+  beforeUnmount () { // 解除監視視窗大小
+    window.removeEventListener('resize', this.handleResize)
   },
   mounted () {
     this.getCarts()

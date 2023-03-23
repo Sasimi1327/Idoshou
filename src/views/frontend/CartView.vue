@@ -46,7 +46,7 @@
       <div v-if="!carts?.length" class="py-4 border border-2 border-grey-66">
         <div class="text-center fz-1 py-10">
           目前購物車沒有商品<br>
-          <RouterLink to="/menu" type="button" class="btn btn-primary fz-5 lh-base p-3 align-middle">要吃飽，才有力氣減肥，繼續逛逛。</RouterLink>
+          <RouterLink to="/menu" type="button" class="btn btn-primary fz-5 lh-base p-3 align-middle mt-6">要吃飽，才有力氣減肥，繼續逛逛。</RouterLink>
         </div>
       </div>
 
