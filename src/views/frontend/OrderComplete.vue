@@ -31,16 +31,106 @@
     </div>
   </div>
 
-  <div class="d-flex flex-column justify-content-center align-items-center my-10 mb-md-20">
-    <div class='text-secondary border border-2 border-secondary p-10 flow-success-animate' style="font-size: 36px;">
-      <span> </span>
-      <span> </span>
-      <span> </span>
-      <span> </span>
-      <i class="fa-regular fa-circle-check d-inline-block text-center" style="font-size: 36px;"></i>
-      付款成功
+  <div class="container my-10 mb-md-20">
+    <div class="text-center pt-10 mb-6">
+      <h2 class="fz-2 lh-sm fw-normal">訂單資訊</h2>
     </div>
-    <div class="d-flex justify-content-center mt-20">
+
+    <div>
+      <div class="d-none d-md-block">
+        <ul class="row list-unstyled py-4 mb-0 border border-2 border-bottom-0 border-grey-66 fw-bold">
+          <li class="col-md-6 text-center">商品資訊</li>
+          <li class="col-md-2">單件計價</li>
+          <li class="col-md-2">商品數量</li>
+          <li class="col-md-2">金額小計</li>
+        </ul>
+      </div>
+
+      <div class="row justify-content-center align-items-center list-unstyled p-4 mb-0 border border-2 mb-n-1px border-grey-66 position-relative"
+        v-for="item in products" :key="item.id">
+        <li class="col-md-6 mb-4 mb-md-0">
+          <img :src="item.product.imageUrl" class="img-fluid w-40 h-40 object-fit-cover mr-5" :alt="item.product.title">
+          {{ item.product.title }}
+        </li>
+        <li class="col-md-2 mb-4 mb-md-0">
+          <span class="d-md-none fz-6 align-middle">單件計價：</span>
+          NT$ {{ item.product.price }}
+        </li>
+        <li class="col-md-2 mb-4 mb-md-0">
+          <span class="d-md-none fz-6 align-middle">商品數量：</span>
+          {{ item.qty }}
+        </li>
+        <li class="col-md-2 mb-4 mb-md-0">
+          <span class="d-md-none fz-6 align-middle">金額小計：</span>
+          NT$ {{ item.final_total }}
+        </li>
+      </div>
+      <div class="row align-items-center mt-4">
+        <div class="col-12 text-end fz-5 fw-normal">
+          <span class="fz-4 fw-bold mr-3">總計金額：</span>
+          NT$ {{ order.total }}
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center pt-10 mb-6">
+      <h2 class="fz-2 lh-sm fw-normal">確認訂單</h2>
+    </div>
+    <div>
+      <ul class="row align-items-center list-unstyled px-8 py-2 mb-0 border border-2 mb-n-1px border-grey-66 position-relative">
+        <li class="col-md-6 d-none d-md-block fz-5 fw-bold my-4 p-4 border-bottom border-grey-d4  align-middle">
+          訂單時間
+        </li>
+        <li class="col-md-6 p-4 border-bottom border-grey-d4 fz-5">
+          <span class="d-inline-block d-md-none fz-5 align-middle">訂單時間：</span>
+          {{ $filters.date(order.create_at) }}
+        </li>
+        <li class="col-md-6 d-none d-md-block fz-5 fw-bold my-4 p-4 border-bottom border-grey-d4  align-middle">
+          訂單編號
+        </li>
+        <li class="col-md-6 p-4 border-bottom border-grey-d4 fz-5">
+          <span class="d-inline-block d-md-none fz-5 align-middle">訂單編號：</span>
+          {{ order.id }}
+        </li>
+        <li class="col-md-6 d-none d-md-block fz-5 fw-bold my-4 p-4 border-bottom border-grey-d4  align-middle">
+          收件人姓名
+        </li>
+        <li class="col-md-6 p-4 border-bottom border-grey-d4 fz-5">
+          <span class="d-inline-block d-md-none fz-5 align-middle">收件人姓名：</span>
+          {{ user.name }}
+        </li>
+        <li class="col-md-6 d-none d-md-block fz-5 fw-bold my-4 p-4 border-bottom border-grey-d4  align-middle">
+          電子郵件
+        </li>
+        <li class="col-md-6 p-4 border-bottom border-grey-d4 fz-5">
+          <span class="d-inline-block d-md-none fz-5 align-middle">電子郵件：</span>
+          {{ user.email }}
+        </li>
+        <li class="col-md-6 d-none d-md-block fz-5 fw-bold my-4 p-4 border-bottom border-grey-d4  align-middle">
+          收件人電話
+        </li>
+        <li class="col-md-6 p-4 border-bottom border-grey-d4 fz-5">
+          <span class="d-inline-block d-md-none fz-5 align-middle">收件人電話：</span>
+          {{ user.tel }}
+        </li>
+        <li class="col-md-6 d-none d-md-block fz-5 fw-bold my-4 p-4 border-bottom border-grey-d4  align-middle">
+          收件人地址
+        </li>
+        <li class="col-md-6 p-4 border-bottom border-grey-d4 fz-5">
+          <span class="d-inline-block d-md-none fz-5 align-middle">收件人地址：</span>
+          {{ user.address }}
+        </li>
+        <li class="col-md-6 d-none d-md-block fz-5 fw-bold my-4 align-middle">
+          付款狀態
+        </li>
+        <li class="col-md-6 p-4 fz-6">
+          <span class="d-inline-block d-md-none fz-5 align-middle">付款狀態：</span>
+          <span :class="{ 'text-success': order.is_paid}">{{ order.is_paid ? '付款完成' : '尚未付款' }}</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="text-end mt-10">
       <RouterLink to="/" type="button" class="btn border-primary p-4 btnCustomHover fw-bold mx-4 hvr-push">前往首頁</RouterLink>
       <RouterLink to="/menu" type="button" class="btn btn-primary p-4 btnCustomHover fw-bold hvr-pop mx-4">繼續購物</RouterLink>
     </div>
@@ -70,6 +160,9 @@ export default {
           this.order = { ...res.data.order }
           this.products = { ...res.data.order.products }
           this.user = { ...res.data.order.user }
+          console.log('order', this.order)
+          console.log('products', this.user)
+          console.log('user', this.user)
         })
         .catch(err => {
           Swal.fire({
@@ -89,88 +182,9 @@ export default {
 </script>
 
 <style lang="scss">
-.flow-success-animate {
-  position: relative;
-  padding: 30px 60px;
-  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
-  color: #44DA2C;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  font: 700 30px consolas;
-  overflow: hidden;
 
-  & span:nth-child(1) {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(to right, white, #44DA2C);
-    animation: animate1 2s linear infinite;
-  }
-  & span:nth-child(2) {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 3px;
-    background: linear-gradient(to right, white, #44DA2C);
-    animation: animate2 2s linear infinite;
-    animation-delay: 1s;
-  }
-  & span:nth-child(3) {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(to right, white, #44DA2C);
-    animation: animate3 2s linear infinite;
-  }
-  & span:nth-child(4) {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 100%;
-    width: 3px;
-    background: linear-gradient(to top, white, #44DA2C);
-    animation: animate4 2s linear infinite;
-    animation-delay: 1s;
-  }
-}
-
-@keyframes animate1 {
-  0% {
-    transform: translateX(-100%);
-  }
-  100% {
-    transform: translateX(100%);
-  }
-}
-@keyframes animate2 {
-  0% {
-    transform: translateY(-100%);
-  }
-  100% {
-    transform: translateY(100%);
-  }
-}
-@keyframes animate3 {
-  0% {
-    transform: translateX(100%);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-@keyframes animate4 {
-  0% {
-    transform: translateY(100%);
-  }
-  100% {
-    transform: translateY(-100%);
-  }
+.mb-n-1px {
+  margin-bottom: -1px;
 }
 
 </style>
