@@ -1,103 +1,159 @@
 <template>
-  <div class="d-flex flex-column justify-content-center align-items-center my-10 my-md-20">
-    <div class='text-primary border border-2 border-primary p-10 flow-404-animate' style="font-size: 36px;">
-      <i class="fa-solid fa-circle-exclamation d-inline-block text-center" style="font-size: 36px;"></i>
-      <span> </span>
-      <span> </span>
-      <span> </span>
-      <span> </span>
-      此頁面不存在
-    </div>
-    <div class="d-flex justify-content-center mt-20">
-      <RouterLink to="/" type="button" class="btn border text-primary p-4 btnCustomHover fw-bold mx-4 hvr-push">前往首頁</RouterLink>
-      <RouterLink to="/menu" type="button" class="btn btn-primary p-4 btnCustomHover fw-bold mx-4 hvr-pop">繼續購物</RouterLink>
+  <div class="container-fluid " style="background-color: #F1ECE8; width: 100vw; height: 100vh;">
+    <div class="cont_principal">
+      <div class="cont_error text-center">
+        <h2>404</h2>
+        <p>您所查詢的網頁不存在或已移除。</p>
+        <div class="d-flex justify-content-center mt-20">
+          <RouterLink to="/" type="button" class="btn border text-primary p-4 btnCustomHover fw-bold mx-4 hvr-push">前往首頁</RouterLink>
+          <RouterLink to="/menu" type="button" class="btn btn-primary p-4 btnCustomHover fw-bold mx-4 hvr-pop">繼續購物</RouterLink>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <style lang="scss">
-.flow-404-animate {
-  position: relative;
-  padding: 30px 60px;
-  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
-  color: #C0362D;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  font: 700 30px consolas;
-  overflow: hidden;
 
-  & span:nth-child(1) {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(to right, white, #C0362D);
-    animation: animate1 2s linear infinite;
-  }
-  & span:nth-child(2) {
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 100%;
-    width: 3px;
-    background: linear-gradient(to bottom, white, #C0362D);
-    animation: animate2 2s linear infinite;
-    animation-delay: 1s;
-  }
-  & span:nth-child(3) {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(to left, white, #C0362D);
-    animation: animate3 2s linear infinite;
-  }
-  & span:nth-child(4) {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 100%;
-    width: 3px;
-    background: linear-gradient(to top, white, #C0362D);
-    animation: animate4 2s linear infinite;
-    animation-delay: 1s;
+.btnCustomHover {
+  transition: all .7s ease;
+  border: 1px solid #840000;
+  &:hover {
+    transform: scale(1.05);
+    color: white;
+    background-color: #840000;
   }
 }
 
-@keyframes animate1 {
-  0% {
-    transform: translateX(-100%);
+.cont_ {
+  &principal {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
   }
-  100% {
-    transform: translateX(100%);
+  &error {
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    top: 50%;
+    margin-top:-150px;
+    & > h2  {
+      font-weight: 400;
+      font-size:150px;
+      color:#666666;
+      position: relative;
+      left:-100%;
+      transition: all 0.5s;
+    }
+    & > p  {
+      font-weight: 300;
+      font-size:24px;
+      letter-spacing: 5px;
+      color:#D4D4D4;
+      position: relative;
+      left:100%;
+      transition: all 0.5s;
+      transition-delay: 0.5s;
+      -webkit-transition: all 0.5s;
+      -webkit-transition-delay: 0.5s;
+    }
   }
 }
-@keyframes animate2 {
-  0% {
-    transform: translateY(-100%);
+
+.cont_error_active > .cont_error > h2 {
+  left:0%;
+}
+.cont_error_active > .cont_error > p {
+  left:0%;
+}
+
+@-webkit-keyframes animation_error_1 {
+  from {
+    -webkit-transform: rotate(20deg);
+  transform: rotate(20deg);
   }
-  100% {
-    transform: translateY(100%);
+  to {  -webkit-transform: rotate(25deg);
+  transform: rotate(25deg);
   }
 }
-@keyframes animate3 {
-  0% {
-    transform: translateX(100%);
+@-o-keyframes animation_error_1 {
+  from {
+    -webkit-transform: rotate(20deg);
+    transform: rotate(20deg);
   }
-  100% {
-    transform: translateX(-100%);
+  to {
+    -webkit-transform: rotate(25deg);
+    transform: rotate(25deg);
   }
 }
-@keyframes animate4 {
-  0% {
-    transform: translateY(100%);
+@-moz-keyframes animation_error_1 {
+  from {
+    -webkit-transform: rotate(20deg);
+    transform: rotate(20deg);
   }
-  100% {
-    transform: translateY(-100%);
+  to {
+    -webkit-transform: rotate(25deg);
+    transform: rotate(25deg);
+  }
+}
+@keyframes animation_error_1 {
+  from {
+    -webkit-transform: rotate(20deg);
+    transform: rotate(20deg);
+  }
+  to {
+    -webkit-transform: rotate(25deg);
+    transform: rotate(25deg);
+  }
+}
+
+@-webkit-keyframes animation_error_2 {
+  from {
+    -webkit-transform: rotate(-15deg);
+    transform: rotate(-15deg);
+  }
+  to {
+    -webkit-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+  }
+}
+@-o-keyframes animation_error_2 {
+  from { -webkit-transform: rotate(-15deg);
+  transform: rotate(-15deg);
+  }
+  to { -webkit-transform: rotate(-20deg);
+  transform: rotate(-20deg);
+  }
+}
+@-moz-keyframes animation_error_2 {
+  from {
+    -webkit-transform: rotate(-15deg);
+    transform: rotate(-15deg);
+  }
+  to {
+    -webkit-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+  }
+}
+@keyframes animation_error_2 {
+  from {
+    -webkit-transform: rotate(-15deg);
+    transform: rotate(-15deg);
+  }
+  to {
+    -webkit-transform: rotate(-20deg);
+    transform: rotate(-20deg);
   }
 }
 
 </style>
+
+<script>
+
+export default {
+  mounted () {
+    document.querySelector('.cont_principal').className = 'cont_principal cont_error_active'
+  }
+}
+</script>
