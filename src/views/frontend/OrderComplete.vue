@@ -123,9 +123,9 @@
         <li class="col-md-6 d-none d-md-block fz-5 fw-bold my-4 align-middle">
           付款狀態
         </li>
-        <li class="col-md-6 p-4 fz-6">
-          <span class="d-inline-block d-md-none fz-5 align-middle">付款狀態：</span>
-          <span :class="{ 'text-success': order.is_paid}">{{ order.is_paid ? '付款完成' : '尚未付款' }}</span>
+        <li class="col-md-6 p-4 fz-6" :class="{ 'text-success': order.is_paid}">
+          <span class="d-inline-block d-md-none fz-5 align-middle text-black">付款狀態：</span>
+          {{ order.is_paid ? '付款完成' : '尚未付款' }}
         </li>
       </ul>
     </div>
