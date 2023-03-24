@@ -305,18 +305,6 @@ export default {
 
 <style lang="scss">
 
-.border-grey-66 {
-  border-color:  #666666;
-}
-
-.text-grey-66 {
-  color: #666666;
-}
-
-.mb-n-1px {
-  margin-bottom: -1px;
-}
-
 .cartBtn:hover:not([disabled]) {
     color: white;
     border: 2px solid #C0362D;

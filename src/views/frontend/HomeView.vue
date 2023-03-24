@@ -306,11 +306,6 @@ export default {
     background-position: center center;
   }
 }
-
-.text-grey-66 {
-  color: #666666;
-}
-
 .swiper {
   width: 100%;
   height: 100%;

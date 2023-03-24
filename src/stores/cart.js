@@ -27,7 +27,7 @@ const cartStore = defineStore('cart', {
         .then(res => {
           this.carts = res.data.data.carts // 購物車
           this.total = res.data.data.total // 總金額
-          this.final_total = res.data.data.final_total // 總金額(含優惠券)
+          this.final_total = Math.round(res.data.data.final_total) // 總金額(含優惠券)
           this.isCoupon = this.total !== this.final_total
           this.loading = false
         })

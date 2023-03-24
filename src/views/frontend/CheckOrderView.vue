@@ -62,7 +62,7 @@
         </li>
         <li class="col-md-2 mb-4 mb-md-0">
           <span class="d-md-none fz-6 align-middle">金額小計：</span>
-          NT$ {{ item.final_total }}
+          NT$ {{ Math.round(item.final_total) }}
         </li>
       </div>
       <div class="row align-items-center mt-4">
@@ -166,7 +166,7 @@ export default {
           this.createAt = res.data.order.create_at
           this.orderId = res.data.order.id
           this.products = res.data.order.products
-          this.total = res.data.order.total
+          this.total = Math.round(res.data.order.total)
           this.user = res.data.order.user
           this.msg = res.data.order?.message
           this.is_paid = res.data.order.is_paid
@@ -231,19 +231,4 @@ export default {
 </script>
 
 <style lang="scss">
-
-.mb-n-1px {
-  margin-bottom: -1px;
-}
-
-.text-grey-66 {
-  color: #666666;
-}
-.border-grey-66 {
-  border-color:  #666666;
-}
-.border-grey-d4 {
-  border-color: #D4D4D4;
-}
-
 </style>

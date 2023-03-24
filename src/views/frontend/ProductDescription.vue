@@ -195,9 +195,7 @@ export default {
 </script>
 
 <style lang="scss">
-.text-grey-66 {
-  color: #666666;
-}
+
 .text-brown {
   color: #B29575;
 }

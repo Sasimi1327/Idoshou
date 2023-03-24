@@ -62,13 +62,13 @@
         </li>
         <li class="col-md-2 mb-4 mb-md-0">
           <span class="d-md-none fz-6 align-middle">金額小計：</span>
-          NT$ {{ item.final_total }}
+          NT$ {{ Math.round(item.final_total) }}
         </li>
       </div>
       <div class="row align-items-center mt-4">
         <div class="col-12 text-end fz-5 fw-normal">
           <span class="fz-4 fw-bold mr-3">總計金額：</span>
-          NT$ {{ order.total }}
+          NT$ {{ Math.round(order.total) }}
         </div>
       </div>
     </div>
@@ -182,9 +182,4 @@ export default {
 </script>
 
 <style lang="scss">
-
-.mb-n-1px {
-  margin-bottom: -1px;
-}
-
 </style>

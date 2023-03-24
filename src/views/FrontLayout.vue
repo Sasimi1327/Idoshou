@@ -255,4 +255,17 @@ export default {
   }
 }
 
+.text-grey-66 {
+  color: #666666;
+}
+.border-grey-66 {
+  border-color:  #666666;
+}
+.border-grey-d4 {
+  border-color: #D4D4D4;
+}
+.mb-n-1px {
+  margin-bottom: -1px;
+}
+
 </style>
