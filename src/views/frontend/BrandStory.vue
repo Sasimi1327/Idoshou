@@ -3,7 +3,6 @@
     <div class="text-center pt-10 mb-10">
       <h2 class="fz-2 lh-sm fw-normal">品牌故事</h2>
     </div>
-
     <div class="row">
       <div class="col-md-6">
         <p class="mb-10 fz-5 fw-normal lh-base">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;我們是一家擁有10多年歷史的老店，位於繁華的都市地段。一直以來秉持著<span class="text-primary">堅持食材、健康、美味的精神</span>，不斷研究和改進，用最新鮮、最優質的食材，製作出健康、美味的菜肴。</p>
@@ -12,7 +11,7 @@
         <p class="mb-10 fz-5 fw-normal lh-base">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;多年來，我們一直堅持初心，用最好的食材，做最美味、最健康的菜肴，用心為每一位顧客提供最優質的服務。未來，我們將繼續秉持著這個精神，不斷創新和改進，為顧客提供更好的食品體驗，成為更多人心目中的美食品牌。感謝您一直以來的支持和信任，我們期待與您再次相見，一起享受美味的食物和愉快的用餐體驗！</p>
       </div>
       <div class="offset-md-1 col-md-5" style="height: 100vh;">
-        <img src="@/assets/professional-chef.png"
+        <img src="@/assets/images/professional-chef.png"
         class="img-fluid object-fit-cover object-center h-100">
       </div>
     </div>

@@ -5,7 +5,6 @@
                 :color="color"
                 :loader="'bars'"
                 :is-full-page="true"/>
-
     <div class="container-fluid header-picture d-flex flex-column justify-content-center">
       <div class="container">
         <div class="row list-unstyled mb-0 justify-content-center align-items-center border border-1 border-dark text-center">
@@ -58,10 +57,8 @@
             精緻餐盒
           </div>
         </div>
-
       </div>
     </div>
-
     <div class="container my-10 mb-md-20">
       <div class="row">
         <div class="col-md-6 col-lg-3 mb-8 overflow-hidden" v-for="product in products" :key="product.id">
@@ -78,7 +75,6 @@
                     <span class="text-muted fw-bold fz-4 ">{{ product.price }}</span>
                   </ins>
                 </span>
-
                 <span v-else>
                   NT$
                   <s class="mr-1">
@@ -97,11 +93,10 @@
         </div>
       </div>
     </div>
-
-    <PaginationView
+    <PaginationComponent
       :pages="pagination"
       @emit-page="getProducts"
-    ></PaginationView>
+    ></PaginationComponent>
   </div>
 </template>
 
@@ -110,13 +105,13 @@ import 'animate.css'
 import LoadingView from 'vue-loading-overlay'
 import 'vue-loading-overlay/dist/css/index.css'
 import Swal from 'sweetalert2'
-import PaginationView from '../../components/PaginationView.vue'
+import PaginationComponent from '@/components/PaginationComponent.vue'
 
 const { VITE_URL, VITE_PATH } = import.meta.env
 
 export default {
   components: {
-    PaginationView,
+    PaginationComponent,
     LoadingView
   },
   data () {

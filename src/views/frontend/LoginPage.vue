@@ -1,5 +1,5 @@
 <template>
-  <div class="container mt-5" style="height: calc( 100vh - 460px)">
+  <div class="container mt-5" style="height: calc( 100vh - 460px); min-height: 350px;">
     <div class="row justify-content-center align-items-center">
       <div class="col-8">
         <h1 class="h2 mb-4 font-weight-normal">
@@ -72,7 +72,7 @@ export default {
               popup: 'animate__animated animate__fadeOutRight'
             }
           })
-          this.$router.push('/admin/products')
+          this.$router.push('/admin')
         })
         .catch(err => {
           Swal.fire({

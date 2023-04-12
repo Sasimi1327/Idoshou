@@ -1,20 +1,16 @@
 <template>
   <div class="container-fluid bg-primary" style="height: 8px"></div>
-
   <nav class="navbar navbar-expand-md bg-body-tertiary container d-flex justify-content-between align-items-center">
     <div class="container py-3">
-
       <button class="navbar-toggler" :class="{ collapsed: isCollapsed }" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
       @click="isCollapsed = !isCollapsed">
         <span class="material-icons align-middle" v-if="isCollapsed">menu</span>
         <span class="material-icons align-middle" v-else>close</span>
       </button>
-
       <h1 class=" mx-auto mr-md-auto ml-md-0">
         <a href="#" class="navbar-brand mr-0 logo hvr-grow-rotate"
         @click="closeCollapsed">伊多賞</a>
       </h1>
-
       <div class="d-none d-md-block">
         <ul class="navbar-nav d-flex ml-auto mb-2 mb-l g-0">
           <li class="nav-item">
@@ -72,12 +68,10 @@
       </li>
     </ul>
   </div>
-
   <RouterView v-if="isHomePage" />
   <div v-else class="container">
     <RouterView />
   </div>
-
   <footer class="container-fluid bg-black">
     <div class="container">
       <div class="row">
@@ -89,7 +83,7 @@
               data-bs-placement="right"
               title="Instagram">
               <a href="https://www.instagram.com/" class="social-link" target="_blank">
-                <img src="../assets/ic_ig.svg" alt="ig">
+                <img src="@/assets/icons/ic_ig.svg" alt="ig">
               </a>
             </li>
             <li class="social-item rounded-circle p-2 mx-2"
@@ -97,7 +91,7 @@
               data-bs-placement="right"
               title="Line">
               <a href="https://line.me/zh-hant/" class="social-link" target="_blank">
-                <img src="../assets/ic_line.svg" alt="line">
+                <img src="@/assets/icons/ic_line.svg" alt="line">
               </a>
             </li>
             <li class="social-item rounded-circle p-2 mx-2"
@@ -105,7 +99,7 @@
               data-bs-placement="right"
               title="Facebook">
               <a href="https://zh-tw.facebook.com/" class="social-link" target="_blank">
-                <img src="../assets/ic_fb.svg" alt="fb">
+                <img src="@/assets/icons/ic_fb.svg" alt="fb">
               </a>
             </li>
             <li class="social-item rounded-circle p-2 mx-2"
@@ -113,7 +107,7 @@
               data-bs-placement="right"
               title="Youtube">
               <a href="https://www.youtube.com/" class="social-link" target="_blank">
-                <img src="../assets/ic_yt.svg" alt="yt">
+                <img src="@/assets/icons/ic_yt.svg" alt="yt">
               </a>
             </li>
           </ul>
@@ -141,7 +135,6 @@
             </div>
           </div>
         </address>
-
         <div class="py-6 px-3 py-md-4 px-md-0 text-grey-66 text-center d-flex flex-column flex-md-row justify-content-center align-items-center">
           <div class="mr-md-2 fz-8 lh-base fw-normal">本作品僅為專題使用，非從事商業用途。</div>
           <div class="fz-8 lh-base fw-normal">Copyright © 2023 Sasimi. All rights reserved.</div>
@@ -201,7 +194,7 @@ export default {
 
 <style lang="scss">
 .logo {
-  background-image: url('../assets/Logo.svg');
+  background-image: url('@/assets/images/Logo.svg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

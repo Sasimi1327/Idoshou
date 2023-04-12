@@ -5,7 +5,6 @@
                 :color="color"
                 :loader="'bars'"
                 :is-full-page="true"/>
-
     <div class="container-fluid header-picture d-flex flex-column justify-content-center">
       <div class="container">
         <ul class="row list-unstyled mb-0 justify-content-center align-items-center border border-1 border-dark text-center align-top">
@@ -37,18 +36,16 @@
         </ul>
       </div>
     </div>
-
     <div class="container my-10 mb-md-20">
       <div class="text-center pt-10 mb-6">
         <h2 class="fz-2 lh-sm fw-normal">收件者資訊</h2>
       </div>
-
-      <v-form ref="form" v-slot="{ errors }" @submit="onSubmit">
+      <VForm ref="form" v-slot="{ errors }" @submit="onSubmit">
         <div class="row">
           <div class="col-md-6 mb-6">
             <!-- 姓名：必填 -->
             <div class="form-floating mb-3">
-              <v-field
+              <VField
                 type="text"
                 class="form-control"
                 id="name"
@@ -60,16 +57,15 @@
                 }"
                 rules="required"
                 v-model="form.user.name"
-              ></v-field>
+              ></VField>
               <label for="name">收件人姓名</label>
-              <error-message name="姓名" class="invalid-feedback"></error-message>
+              <ErrorMessage name="姓名" class="invalid-feedback"></ErrorMessage>
             </div>
-
           </div>
           <div class="col-md-6 mb-6">
             <!-- Email：必填 / 需要符合格式 / input type 為 email -->
             <div class="form-floating mb-3">
-              <v-field
+              <VField
                 type="email"
                 class="form-control"
                 id="email"
@@ -81,16 +77,15 @@
                 }"
                 rules="email|required"
                 v-model="form.user.email"
-              ></v-field>
+              ></VField>
               <label for="email">電子郵件</label>
-              <error-message name="電子郵件" class="invalid-feedback"></error-message>
+              <ErrorMessage name="電子郵件" class="invalid-feedback"></ErrorMessage>
             </div>
-
           </div>
           <div class="col-md-6 mb-6">
             <!-- 電話：必填 / 超過 8 碼 / input type 為 tel -->
             <div class="form-floating mb-3">
-              <v-field
+              <VField
                 type="tel"
                 class="form-control"
                 id="tel"
@@ -107,16 +102,15 @@
                   regex: /^(09)([0-9]{2})([0-9]{6})$|^(0)([0-9]{1})([0-9]{6,8})$/
                 }"
                 v-model="form.user.tel"
-              ></v-field>
+              ></VField>
               <label for="tel">收件人電話</label>
-              <error-message name="電話" class="invalid-feedback"></error-message>
+              <ErrorMessage name="電話" class="invalid-feedback"></ErrorMessage>
             </div>
-
           </div>
           <div class="col-md-6 mb-6">
             <!-- 地址：必填 -->
             <div class="form-floating mb-3">
-              <v-field
+              <VField
                 type="text"
                 class="form-control"
                 id="address"
@@ -128,11 +122,10 @@
                 }"
                 rules="required"
                 v-model="form.user.address"
-              ></v-field>
+              ></VField>
               <label for="address">收件人地址</label>
-              <error-message name="地址" class="invalid-feedback"></error-message>
+              <ErrorMessage name="地址" class="invalid-feedback"></ErrorMessage>
             </div>
-
           </div>
           <div class="col-12 mb-6">
             <!-- 留言：非必填 -->
@@ -159,7 +152,7 @@
             送出訂單
           </button>
         </div>
-      </v-form>
+      </VForm>
     </div>
   </div>
 </template>

@@ -4,8 +4,7 @@
                 :can-cancel="false"
                 :color="color"
                 :loader="'bars'"
-                :is-full-page="true"/>
-
+                :is-full-page="true" />
     <div class="container-fluid header-picture d-flex flex-column justify-content-center">
       <div class="container">
         <ul class="row list-unstyled mb-0 justify-content-center align-items-center border border-1 border-dark text-center align-top">
@@ -37,19 +36,16 @@
         </ul>
       </div>
     </div>
-
     <div class="container my-10 mb-md-20">
       <div class="text-center pt-10 mb-6">
         <h2 class="fz-2 lh-sm fw-normal">購物清單</h2>
       </div>
-
       <div v-if="!carts?.length" class="py-4 border border-2 border-grey-66">
         <div class="text-center fz-1 py-10">
           目前購物車沒有商品<br>
           <RouterLink to="/menu" type="button" class="btn btn-primary fz-5 lh-base p-3 align-middle mt-6">要吃飽，才有力氣減肥，繼續逛逛。</RouterLink>
         </div>
       </div>
-
       <template v-else>
         <div class="d-none d-md-block">
           <ul class="row list-unstyled py-4 mb-0 border border-2 border-bottom-0 border-grey-66 fw-bold">
@@ -60,7 +56,6 @@
             <li class="col-md-1">刪除</li>
           </ul>
         </div>
-
         <ul class="row justify-content-center align-items-center list-unstyled p-4 mb-0 border border-1 mb-n-1px border-grey-66 position-relative"
           v-for="item in carts" :key="item.id">
           <li class="col-md-5 mb-4 mb-md-0">
@@ -77,11 +72,9 @@
               @click.prevent="item.qty--; updateCartItem(item)">
                 <i class="fa-solid fa-minus"></i>
               </button>
-
               <div class="text-center align-middle border-top border-bottom border-1 border-dark d-flex justify-content-center align-items-center" style="height: 35px; width: 50px;">
                 <input type="text" disabled class="bg-transparent text-center fz-5 w-60 border-0" v-model="item.qty">
               </div>
-
               <button type="button" class="btn btn-outline-primary"
               @click.prevent="item.qty++; updateCartItem(item)">
                 <i class="fa-solid fa-plus"></i>
@@ -98,7 +91,6 @@
             ></button>
           </li>
         </ul>
-
         <div class="row py-3">
           <div class="col-3">
             <button class="w-100 p-4 bg-white fz-9 fz-md-4 cartBtn"
@@ -135,7 +127,6 @@
             </button>
           </div>
         </div>
-
         <div class="row align-items-center">
           <div class="col-12 text-end fz-5 fw-normal">
             <span class="fz-4 fw-bold mr-3">總計:</span>
@@ -149,7 +140,6 @@
         </div>
       </template>
     </div>
-
     <CouponModal
       ref="couponModal"
       @update-coupon="updateCoupon"

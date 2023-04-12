@@ -5,16 +5,15 @@
                 :color="color"
                 :loader="'bars'"
                 :is-full-page="true"/>
-
     <div class="container-fluid position-relative overflow-hidden">
       <div class="text-bg-skin hero-content"></div>
       <div class="bg-primary hero-footer"></div>
-      <img src="@/assets/img_kv_w.svg" class="img-fluid position-absolute bottom-0 left-50 translate-middle-x d-none d-md-block" alt="hero pc">
-      <img src="@/assets/img_kv_m.svg" class="mb-3 object-fit-contain position-absolute bottom-0 left-50 translate-middle-x d-md-none" alt="hero mobile">
+      <img src="@/assets/images/img_kv_w.svg" class="img-fluid position-absolute bottom-0 left-50 translate-middle-x d-none d-md-block" alt="hero pc">
+      <img src="@/assets/images/img_kv_m.svg" class="mb-3 object-fit-contain position-absolute bottom-0 left-50 translate-middle-x d-md-none" alt="hero mobile">
       <div class="container">
         <div class="d-flex align-items-center">
-          <img src="../../assets/slogan_w.svg" class="position-absolute top-50 left-0 translate-middle-y d-none d-md-block" alt="slogan pc">
-          <img src="../../assets/slogan_m.svg" class="position-absolute top-25 left-50 translate-middle d-md-none" alt="slogan mobile">
+          <img src="@/assets/images/slogan_w.svg" class="position-absolute top-50 left-0 translate-middle-y d-none d-md-block" alt="slogan pc">
+          <img src="@/assets/images/slogan_m.svg" class="position-absolute top-25 left-50 translate-middle d-md-none" alt="slogan mobile">
         </div>
       </div>
       <RouterLink to="/menu" type="button" class="btn-order hvr-pulse-grow position-absolute bottom-10 right-5">
@@ -22,7 +21,6 @@
         <div class="lh-base fz-7"># 點餐去</div>
       </RouterLink>
     </div>
-
     <div class="container mb-10 mb-md-20">
       <div class="text-center mt-md-20 mt-10 mb-6">
         <h2 data-aos="flip-left" class="fz-2 lh-sm fw-normal">新品上市</h2>
@@ -31,8 +29,8 @@
       <div class="row gx-0 gx-md-3">
         <div class="col-12 mb-4 mb-md-6">
           <div data-aos="zoom-in" class="card bg-dark text-white">
-            <img src="../../assets/img_new_banner_w.png" class="card-img d-none d-md-block" alt="...">
-            <img src="../../assets/img_new_banner_m.png" class="card-img d-md-none" alt="...">
+            <img src="@/assets/images/img_new_banner_w.png" class="card-img d-none d-md-block" alt="banner pc">
+            <img src="@/assets/images/img_new_banner_m.png" class="card-img d-md-none" alt="banner mobile">
             <div class="card-img-overlay">
               <div class="position-absolute top-25 left-30 top-md-30 left-md-20">
                 <h5 class="card-subtitle fz-5 fw-normal text-center">美味多層次</h5>
@@ -41,7 +39,6 @@
             </div>
           </div>
         </div>
-
         <div class="col-md-4 mb-4 mb-md-0" v-for="newItem in productsNew" :key="newItem.id">
           <div data-aos="zoom-in-up" class="card card-image bg-dark text-white" @click.prevent="goDetail(`${newItem.id}`)">
             <div class="card-img-container">
@@ -59,20 +56,18 @@
         </div>
       </div>
     </div>
-
     <div class="container-fluid bg-gradient position-relative mt-10 mt-md-20">
       <div class="container recommand">
         <div class="row">
           <div class="col-12 text-center mb-md-20">
-            <img src="../../assets/img_title_recommend_lemon.png"
+            <img src="@/assets/images/img_title_recommend_lemon.png"
           class="img-fluid d-none d-md-block" alt="recommend pc">
-            <img src="../../assets/recommend.png"
+            <img src="@/assets/images/recommend.png"
           class="img-fluid d-md-none" alt="recommend mobile">
           </div>
         </div>
       </div>
     </div>
-
     <div class="book-menu1">
       <div class="container-fluid-md container">
         <div class="col-md-6 ml-auto py-10 py-md-20" style="background-color: rgba(24, 24, 24, 0.8);">
@@ -105,17 +100,14 @@
         </div>
       </div>
     </div>
-
     <div class="container-fluid bg-gradient-reverse pb-10 pb-md-12">
       <div class="container text-center">
         <div class="text-center pt-md-20 pt-10 mb-6">
           <h2 data-aos="flip-left" class="fz-2 lh-sm fw-normal">暢銷商品</h2>
           <span data-aos="flip-left" class="fz-8 lh-base fw-normal">網路人氣熱銷，千萬別錯過</span>
         </div>
-
         <div class="d-none d-md-block">
           <div class="row">
-
             <div class="col-md-3" v-for="popularItem in productsPopular" :key="popularItem.id">
               <div data-aos="fade-up"
                   data-aos-duration="3000"
@@ -131,7 +123,6 @@
             </div>
           </div>
         </div>
-
         <div class="d-md-none">
           <swiper :pagination="true"
                   :loop="true"
@@ -293,14 +284,14 @@ export default {
 
 .book {
   &-menu1 {
-    background-image: url('../../assets/bg_booking_1.png');
+    background-image: url('@/assets/images/bg_booking_1.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
   }
   &-menu2 {
     height: auto;
-    background-image: url('../../assets/bg_booking_2.png');
+    background-image: url('@/assets/images/bg_booking_2.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;

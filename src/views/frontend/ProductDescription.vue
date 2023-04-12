@@ -5,28 +5,24 @@
                 :color="color"
                 :loader="'bars'"
                 :is-full-page="true"/>
-
     <div class="container mb-6 mb-md-10">
       <div class="card mb-3" style="100%">
         <div class="row g-0">
           <div class="col-md-5">
             <img :src="selectProduct.imageUrl" class="img-fluid object-fit-cover rounded-start" :alt="selectProduct.title">
           </div>
-
           <div class="offset-md-1 col-md-6">
             <div class="card-body p-4">
               <div class="d-flex justify-content-between align-items-center">
                 <h5 class="card-subtitle fz-7 fw-normal lh-base opacity-50 text-grey-66">
                   {{ selectProduct.category }}
                 </h5>
-
                 <button type="button" class="btn-close hvr-outline-out fz-4"
                 data-bs-toggle="tooltip"
                 data-bs-placement="top"
                 title="回商品列表"
                 @click="goMenu">
                 </button>
-
               </div>
               <div class="mr-4">
                 <h3 class="card-title fz-2 fw-bold mt-3 text-brown">{{ selectProduct.title }}</h3>
@@ -40,14 +36,10 @@
               </div>
             </div>
           </div>
-
           <div class="col-12">
-            <!-- <div class="card-footer d-flex flex-column flex-sm-row justify-content-between bg-white py-4 mx-auto"> -->
             <div class="card-footer align-items-center row bg-white py-4 mx-auto">
               <!-- 數量增減 -->
-              <!-- <div class="d-flex justify-content-center align-items-center mb-6 mb-sm-0"> -->
               <div class="col-sm-6 col-md-4 col-lg-3 my-3">
-
               <div class="d-flex justify-content-center align-items-center">
                 <div class="text-center border rounded-circle mx-2">
                   <button type="button" class="icon-btn align-middle"
@@ -55,11 +47,9 @@
                     <i class="fa-solid fa-plus fz-5 lh-base text-primary"></i>
                   </button>
                 </div>
-
                 <div class="text-center align-middle lh-base border border-2 border-primary mx-2 d-flex justify-content-center align-items-center" style="height: 50px; width: 50px;">
                   <input type="text" disabled class="bg-transparent text-center fz-4 w-60 border-0" v-model="qty">
                 </div>
-
                 <div class="text-center border rounded-circle mx-2">
                   <button type="button" class="icon-btn align-middle"
                     @click=" qty > 1 ? qty-- : ''">
@@ -69,7 +59,6 @@
               </div>
               </div>
               <div class="col-sm-6 col-md-8 col-lg-9 my-3">
-
                 <!-- 加入按鈕 -->
                 <button type="button" class="btn-addCart w-100 btn btn-outline-primary border border-primary rounded-3 bg-transparent border-2 mx-2 py-3 fz-4 fw-bold lh-base" data-hover="加入購物車"
                 @click.prevent="() => addToCart(selectProduct.id, qty)"
@@ -79,13 +68,10 @@
                   </span>
                 </button>
               </div>
-
             </div>
           </div>
-
         </div>
       </div>
-
       <div class="d-flex justify-content-center align-items-center mt-10 rounded-pill">
         <div class="border w-100 p-4">
           <h3 class="fz-3">餐點注意須知</h3>

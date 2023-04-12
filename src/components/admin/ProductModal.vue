@@ -60,8 +60,10 @@
                   </div>
                   <img class="img-fluid" :src="imgUrl">
                   <!-- 多圖 -->
-                  <button class="btn btn-outline-danger btn-sm d-block w-100"
-                          @click="selectProduct.imagesUrl.splice(key, 1)"
+                  <button
+                      type="button"
+                      class="btn btn-outline-danger btn-sm d-block w-100"
+                      @click="selectProduct.imagesUrl.splice(key, 1)"
                   >
                     刪除圖片
                   </button>
@@ -70,6 +72,7 @@
                 <div
                   v-if="!selectProduct.imagesUrl.length || selectProduct.imagesUrl.at(-1)">
                   <button
+                    type="button"
                     class="btn btn-outline-primary btn-sm d-block w-100" @click="selectProduct.imagesUrl.push('')"
                   >
                     新增圖片

@@ -13,8 +13,11 @@
             <span v-if="isNew">新增優惠卷</span>
             <span v-else>編輯優惠卷</span>
           </h5>
-          <button type="button" class="btn-close"
-                data-bs-dismiss="modal" aria-label="Close"></button>
+          <button type="button"
+                  @click="$emit('cancel-update-coupon')"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <div class="mb-3">
@@ -36,15 +39,12 @@
               placeholder="請輸入優惠碼">
           </div>
           <label for="due_date">到期日</label>
-          <!-- <div class="mb-3"> -->
             <VueDatePicker
               class="mb-3 px-1"
               id="due_date"
-              :allowed-dates="allowedDates"
               :min-date="new Date()"
               :enable-time-picker="false"
               v-model="due_date" />
-          <!-- </div> -->
           <div class="mb-3">
             <label for="discount">折扣百分比</label>
             <input type="number"
@@ -69,7 +69,10 @@
           </div>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Close</button>
+          <button type="button"
+                  class="btn btn-outline-primary"
+                  data-bs-dismiss="modal"
+                  @click="$emit('cancel-update-coupon')">Close</button>
           <button type="button" class="btn btn-primary"
                   @click="$emit('update-coupon', selectCoupon)"> {{ isNew ? '新增優惠卷' : '更新優惠券' }}
           </button>

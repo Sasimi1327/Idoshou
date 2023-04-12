@@ -8,13 +8,13 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <router-link class="nav-link" to="/admin/products">商品列表</router-link>
+            <RouterLink class="nav-link" to="/admin/">商品列表</RouterLink>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/admin/orders">訂單列表</router-link>
+            <RouterLink class="nav-link" to="/admin/orders">訂單列表</RouterLink>
           </li>
           <li class="nav-item">
-            <router-link class="nav-link" to="/admin/coupons">優惠券列表</router-link>
+            <RouterLink class="nav-link" to="/admin/coupons">優惠券列表</RouterLink>
           </li>
           <li class="nav-item">
             <a href="#" class="nav-link" @click.prevent="logout">登出</a>
@@ -93,7 +93,7 @@ export default {
 
 <style lang="scss">
 .logo {
-  background-image: url('../assets/Logo.svg');
+  background-image: url('@/assets/images/Logo.svg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

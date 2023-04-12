@@ -30,12 +30,10 @@
       </ul>
     </div>
   </div>
-
   <div class="container my-10 mb-md-20">
     <div class="text-center pt-10 mb-6">
       <h2 class="fz-2 lh-sm fw-normal">訂單資訊</h2>
     </div>
-
     <div>
       <div class="d-none d-md-block">
         <ul class="row list-unstyled py-4 mb-0 border border-2 border-bottom-0 border-grey-66 fw-bold">
@@ -45,7 +43,6 @@
           <li class="col-md-2">金額小計</li>
         </ul>
       </div>
-
       <div class="row justify-content-center align-items-center list-unstyled p-4 mb-0 border border-2 mb-n-1px border-grey-66 position-relative"
         v-for="item in products" :key="item.id">
         <li class="col-md-6 mb-4 mb-md-0">
@@ -72,7 +69,6 @@
         </div>
       </div>
     </div>
-
     <div class="text-center pt-10 mb-6">
       <h2 class="fz-2 lh-sm fw-normal">確認訂單</h2>
     </div>
@@ -129,13 +125,11 @@
         </li>
       </ul>
     </div>
-
     <div class="text-end mt-10">
       <RouterLink to="/" type="button" class="btn border-primary p-4 btnCustomHover fw-bold mx-4 hvr-push">前往首頁</RouterLink>
       <RouterLink to="/menu" type="button" class="btn btn-primary p-4 btnCustomHover fw-bold hvr-pop mx-4">繼續購物</RouterLink>
     </div>
   </div>
-
 </template>
 
 <script>
@@ -160,9 +154,6 @@ export default {
           this.order = { ...res.data.order }
           this.products = { ...res.data.order.products }
           this.user = { ...res.data.order.user }
-          console.log('order', this.order)
-          console.log('products', this.user)
-          console.log('user', this.user)
         })
         .catch(err => {
           Swal.fire({
